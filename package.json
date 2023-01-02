@@ -21,6 +21,7 @@
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/jsdom": "^20.0.1",
+    "@types/marked": "^4.0.8",
     "@types/node": "^18.11.12",
     "@vicons/antd": "^0.12.0",
     "@vicons/carbon": "^0.12.0",
@@ -39,6 +40,7 @@
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
     "jsdom": "^20.0.3",
+    "marked": "^4.2.5",
     "naive-ui": "^2.34.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
