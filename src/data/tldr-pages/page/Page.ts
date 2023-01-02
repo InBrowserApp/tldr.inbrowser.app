@@ -16,6 +16,7 @@ export class Page {
     return text;
   }
 
+  // example: /pages/common/cat
   get path(): string {
     const filename = this.entry.filename;
     const prefix = "tldr-main";
@@ -24,6 +25,7 @@ export class Page {
     return filename.slice(prefix.length, -suffix.length);
   }
 
+  // example: tldr-main/pages/common/cat.md
   get filename(): string {
     return this.entry.filename;
   }
@@ -36,5 +38,23 @@ export class Page {
     const filenameParts = this.filename.split("/");
     const command = filenameParts[filenameParts.length - 1].split(".")[0];
     return command;
+  }
+
+  // path: /pages.zh/common/cat.md
+  // return "zh"
+  get language(): string | undefined {
+    const path = this.path;
+    const pageSection = path.split("/")[1];
+    const languageParts = pageSection.split(".");
+    if (languageParts.length !== 2) return undefined;
+    const language = languageParts[1];
+    return language;
+  }
+
+  // path: /pages.zh/common/cat.md
+  // return "common"
+  get platform(): string {
+    const path = this.path;
+    return path.split("/")[2];
   }
 }

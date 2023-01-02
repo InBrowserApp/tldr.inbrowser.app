@@ -3,9 +3,11 @@ import { ref } from "vue";
 import { getPage, type Page } from "@/data/tldr-pages/page";
 import { useRoute } from "vue-router";
 import { computedAsync } from "@vueuse/core";
-import { NDivider } from "naive-ui";
+import { NDivider, NSpace } from "naive-ui";
 import PageMarkdown from "@/components/page/PageMarkdown.vue";
 import FindOnGitHub from "@/components/page/FindOnGitHub.vue";
+import PageLanguage from "@/components/page/PageLanguage.vue";
+import PagePlatform from "@/components/page/PagePlatform.vue";
 
 const route = useRoute();
 const evaluating = ref(false);
@@ -42,6 +44,10 @@ const markdown = computedAsync<string | undefined | null>(
 
 <template>
   <main>
+    <n-space>
+      <PageLanguage :language="page?.language" v-if="page?.language" />
+      <PagePlatform :platform="page.platform" v-if="page?.platform" />
+    </n-space>
     <PageMarkdown :markdown="markdown" v-if="markdown" />
     <n-divider />
     <FindOnGitHub :href="page.githubURL" v-if="page" />
