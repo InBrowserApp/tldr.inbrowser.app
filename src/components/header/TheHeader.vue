@@ -3,6 +3,8 @@
     <div class="wrapper">
       <HeaderText />
       <HeaderNav class="nav" />
+      
+      <PageSearch />
     </div>
   </header>
 </template>
@@ -10,6 +12,7 @@
 <script lang="ts" setup>
 import HeaderText from "./HeaderText.vue";
 import HeaderNav from "./nav/HeaderNav.vue";
+import PageSearch from "@/components/search/PageSearch.vue";
 </script>
 
 <style scoped>
