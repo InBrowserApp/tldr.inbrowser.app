@@ -3,17 +3,23 @@ import { TextWriter } from "@zip.js/zip.js";
 
 export class Page {
   private readonly entry: Entry;
-  private textCache: string | undefined = undefined;
+
+  private textPromise: Promise<string> | undefined = undefined;
+  private commandPromise: Promise<string> | undefined = undefined;
 
   constructor(entry: Entry) {
     this.entry = entry;
   }
 
   async text(): Promise<string> {
-    if (this.textCache) return this.textCache;
-    const text = await this.entry.getData(new TextWriter());
-    this.textCache = text;
-    return text;
+    if (this.textPromise) return this.textPromise;
+
+    this.textPromise = (async () => {
+      const text = await this.entry.getData(new TextWriter());
+      return text;
+    })();
+
+    return this.textPromise;
   }
 
   // example: /pages/common/cat
@@ -34,10 +40,20 @@ export class Page {
     return `https://github.com/tldr-pages/tldr/blob/main${this.path}.md`;
   }
 
-  get command(): string {
-    const filenameParts = this.filename.split("/");
-    const command = filenameParts[filenameParts.length - 1].split(".")[0];
-    return command;
+  get command(): Promise<string> {
+    if (this.commandPromise) return this.commandPromise;
+
+    this.commandPromise = (async () => {
+      const text = await this.text();
+      // regex get # h1
+      const command = text.match(/^# (.*)/)?.[1];
+      if (!command) {
+        return this.basename;
+      }
+      return command;
+    })();
+
+    return this.commandPromise;
   }
 
   get basename(): string {
