@@ -13,9 +13,15 @@ export async function searchPages(
   const query = query_.trim().replace(" ", "-");
   const pages = await getPages();
 
-  let result = pages.filter((page) => {
+  const prefixResult = pages.filter((page) => {
+    return page.path.toLowerCase().includes("/" + query.toLowerCase());
+  });
+
+  const anyResult = pages.filter((page) => {
     return page.path.toLowerCase().includes(query.toLowerCase());
   });
+
+  let result = [...new Set([...prefixResult, ...anyResult])];
 
   // filter by language
   if (options?.language) {
