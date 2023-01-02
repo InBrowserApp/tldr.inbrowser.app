@@ -13,6 +13,7 @@
     "download:tldr-pages": "wget -O public/tldr-pages.zip https://github.com/tldr-pages/tldr/archive/refs/heads/main.zip"
   },
   "dependencies": {
+    "@zip.js/zip.js": "^2.6.61",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
