@@ -1,2 +1,2 @@
 export { getZipReader } from "./getZipReader";
-export { getEntries } from "./getEntries";
+export { getPagesEntries } from "./getEntries";
