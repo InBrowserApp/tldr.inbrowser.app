@@ -45,7 +45,10 @@ const markdown = computedAsync<string | undefined | null>(
 <template>
   <main>
     <n-space>
-      <PageLanguage :language="page?.language" v-if="page?.language" />
+      <PageLanguage
+        :language="page?.language"
+        v-if="page?.language && page.language !== ''"
+      />
       <PagePlatform :platform="page.platform" v-if="page?.platform" />
     </n-space>
     <PageMarkdown :markdown="markdown" v-if="markdown" />

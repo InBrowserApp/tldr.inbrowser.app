@@ -42,11 +42,11 @@ export class Page {
 
   // path: /pages.zh/common/cat.md
   // return "zh"
-  get language(): string | undefined {
+  get language(): string {
     const path = this.path;
     const pageSection = path.split("/")[1];
     const languageParts = pageSection.split(".");
-    if (languageParts.length !== 2) return undefined;
+    if (languageParts.length !== 2) return "";
     const language = languageParts[1];
     return language;
   }
