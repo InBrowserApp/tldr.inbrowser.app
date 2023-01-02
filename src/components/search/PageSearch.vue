@@ -1,18 +1,21 @@
 <template>
-  <n-auto-complete
-    v-model:value="query"
-    :input-props="{
-      autocomplete: 'disabled',
-    }"
-    :options="options"
-    placeholder="tar"
-    :render-label="renderLabel"
-    :get-show="() => true"
-    :menu-props="{
-      class: 'page-search-auto-complete-menu',
-    }"
-    @select="router.push"
-  />
+  <div class="search-combined">
+    <n-auto-complete
+      v-model:value="query"
+      :input-props="{
+        autocomplete: 'disabled',
+      }"
+      :options="options"
+      placeholder="tar"
+      :render-label="renderLabel"
+      :get-show="() => true"
+      :menu-props="{
+        class: 'page-search-auto-complete-menu',
+      }"
+      @select="router.push"
+    />
+    <PageSearchConfig v-model:config="config" />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -23,13 +26,27 @@ import { computedAsync } from "@vueuse/core";
 import PageSearchResultEntry from "./PageSearchResultEntry.vue";
 import type { Page } from "@/data/tldr-pages/page";
 import { useRouter } from "vue-router";
+import PageSearchConfig from "./PageSearchConfig.vue";
+import { useStorage } from "@vueuse/core";
+
+const config = useStorage(
+  "tldr.inbrowser.app:search:config",
+  {
+    languages: [""],
+    platforms: ["common"],
+  },
+  undefined,
+  { mergeDefaults: true }
+);
 
 const router = useRouter();
 const query = ref("");
 const searchResults = computedAsync(async () => {
+  const languages = config.value.languages;
+  const platforms = config.value.platforms;
   const results = await searchPages(query.value, {
-    // language: ["", "de"],
-    // platform: ["common", "linux", "windows", "android", "osx", "sunos"],
+    languages,
+    platforms,
   });
   console.debug(results);
   return results;
@@ -55,5 +72,14 @@ const renderLabel = (option: SelectOption) => {
 <style>
 .page-search-auto-complete-menu .n-base-select-option__content {
   width: 100%;
+}
+</style>
+
+<style scoped>
+.search-combined {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3em;
 }
 </style>

@@ -2,8 +2,8 @@ import { Page, getPages } from "../page";
 
 export interface SearchOptions {
   size?: number;
-  language?: string[]; // ["", "de"]
-  platform?: string[]; // ["common", "linux"]
+  languages?: string[]; // ["", "de"]
+  platforms?: string[]; // ["common", "linux"]
 }
 
 export async function searchPages(
@@ -40,12 +40,12 @@ export async function searchPages(
   ];
 
   // filter by language
-  if (options?.language) {
-    result = filterByLanguage(result, options.language);
+  if (options?.languages) {
+    result = filterByLanguage(result, options.languages);
   }
 
-  if (options?.platform) {
-    result = filterByPlatform(result, options.platform);
+  if (options?.platforms) {
+    result = filterByPlatform(result, options.platforms);
   }
 
   // limit entries size
