@@ -22,7 +22,10 @@ usePageViewMetadata(toRef(route, "path"), page);
         :language="page?.language"
         v-if="page?.language && page.language !== ''"
       />
-      <PagePlatform :platform="page.platform" v-if="page?.platform" />
+      <PagePlatform
+        :platform="page.platform"
+        v-if="page?.platform && page?.platform !== 'common'"
+      />
     </n-space>
     <PageMarkdown :markdown="markdown" v-if="markdown" />
     <n-divider />
