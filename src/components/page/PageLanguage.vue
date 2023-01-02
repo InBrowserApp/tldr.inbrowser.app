@@ -1,5 +1,5 @@
 <template>
-  <n-tag :bordered="false">
+  <n-tag :bordered="false" :size="size">
     {{ language }}
     <template #icon>
       <n-icon :component="Language" />
@@ -13,5 +13,6 @@ import Language from "@vicons/ionicons5/Language";
 
 defineProps<{
   language: string;
+  size?: "small" | "medium" | "large";
 }>();
 </script>

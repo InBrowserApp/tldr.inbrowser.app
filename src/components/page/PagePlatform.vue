@@ -1,5 +1,5 @@
 <template>
-  <n-tag :bordered="false">
+  <n-tag :bordered="false" :size="size">
     {{ platform }}
     <template #icon>
       <n-icon :component="icon" />
@@ -19,6 +19,7 @@ import Windows from "@vicons/fa/Windows";
 
 const props = defineProps<{
   platform: string;
+  size?: "small" | "medium" | "large";
 }>();
 
 const icon = computed<Component>(() => {
