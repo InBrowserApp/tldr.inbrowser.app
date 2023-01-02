@@ -1,14 +1,13 @@
 <template>
-  <div v-html="html"></div>
+  <CustomMarkdown :markdown="mdStr" :parser="parser" />
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-import { marked } from "marked";
+import CustomMarkdown from "./custom-markdown/custom-markdown";
+import { parser } from "./naive-ui-markdown/naive-ui-markdown-parser";
+import mdStr from "./test.md?raw";
 
-const props = defineProps<{
+defineProps<{
   markdown: string;
 }>();
-
-const html = computed(() => marked.parse(props.markdown));
 </script>

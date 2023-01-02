@@ -1,0 +1,448 @@
+[
+    {
+        "type": "heading",
+        "raw": "# tar\n\n",
+        "depth": 1,
+        "text": "tar",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "tar",
+                "text": "tar"
+            }
+        ]
+    },
+    {
+        "type": "blockquote",
+        "raw": "> Archiving utility.\n> Often combined with a compression method, such as gzip or bzip2.\n> More information: <https://www.gnu.org/software/tar>.\n\n",
+        "tokens": [
+            {
+                "type": "paragraph",
+                "raw": "Archiving utility.\nOften combined with a compression method, such as gzip or bzip2.\nMore information: <https://www.gnu.org/software/tar>.\n",
+                "text": "Archiving utility.\nOften combined with a compression method, such as gzip or bzip2.\nMore information: <https://www.gnu.org/software/tar>.",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Archiving utility.\nOften combined with a compression method, such as gzip or bzip2.\nMore information: ",
+                        "text": "Archiving utility.\nOften combined with a compression method, such as gzip or bzip2.\nMore information: "
+                    },
+                    {
+                        "type": "link",
+                        "raw": "<https://www.gnu.org/software/tar>",
+                        "text": "https://www.gnu.org/software/tar",
+                        "href": "https://www.gnu.org/software/tar",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "https://www.gnu.org/software/tar",
+                                "text": "https://www.gnu.org/software/tar"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "raw": ".",
+                        "text": "."
+                    }
+                ]
+            }
+        ],
+        "text": "Archiving utility.\nOften combined with a compression method, such as gzip or bzip2.\nMore information: <https://www.gnu.org/software/tar>.\n"
+    },
+    {
+        "type": "list",
+        "raw": "- [c]reate an archive and write it to a [f]ile:",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "- [c]reate an archive and write it to a [f]ile:",
+                "task": false,
+                "loose": false,
+                "text": "[c]reate an archive and write it to a [f]ile:",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "[c]reate an archive and write it to a [f]ile:",
+                        "text": "[c]reate an archive and write it to a [f]ile:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "[c]reate an archive and write it to a [f]ile:",
+                                "text": "[c]reate an archive and write it to a [f]ile:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "`tar cf {{target.tar}} {{file1}} {{file2}} {{file3}}`",
+        "text": "`tar cf {{target.tar}} {{file1}} {{file2}} {{file3}}`",
+        "tokens": [
+            {
+                "type": "codespan",
+                "raw": "`tar cf {{target.tar}} {{file1}} {{file2}} {{file3}}`",
+                "text": "tar cf {{target.tar}} {{file1}} {{file2}} {{file3}}"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "- [c]reate a g[z]ipped archive and write it to a [f]ile:",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "- [c]reate a g[z]ipped archive and write it to a [f]ile:",
+                "task": false,
+                "loose": false,
+                "text": "[c]reate a g[z]ipped archive and write it to a [f]ile:",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "[c]reate a g[z]ipped archive and write it to a [f]ile:",
+                        "text": "[c]reate a g[z]ipped archive and write it to a [f]ile:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "[c]reate a g[z]ipped archive and write it to a [f]ile:",
+                                "text": "[c]reate a g[z]ipped archive and write it to a [f]ile:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "`tar czf {{target.tar.gz}} {{file1}} {{file2}} {{file3}}`",
+        "text": "`tar czf {{target.tar.gz}} {{file1}} {{file2}} {{file3}}`",
+        "tokens": [
+            {
+                "type": "codespan",
+                "raw": "`tar czf {{target.tar.gz}} {{file1}} {{file2}} {{file3}}`",
+                "text": "tar czf {{target.tar.gz}} {{file1}} {{file2}} {{file3}}"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "- [c]reate a g[z]ipped archive from a directory using relative paths:",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "- [c]reate a g[z]ipped archive from a directory using relative paths:",
+                "task": false,
+                "loose": false,
+                "text": "[c]reate a g[z]ipped archive from a directory using relative paths:",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "[c]reate a g[z]ipped archive from a directory using relative paths:",
+                        "text": "[c]reate a g[z]ipped archive from a directory using relative paths:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "[c]reate a g[z]ipped archive from a directory using relative paths:",
+                                "text": "[c]reate a g[z]ipped archive from a directory using relative paths:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "`tar czf {{target.tar.gz}} --directory={{path/to/directory}} .`",
+        "text": "`tar czf {{target.tar.gz}} --directory={{path/to/directory}} .`",
+        "tokens": [
+            {
+                "type": "codespan",
+                "raw": "`tar czf {{target.tar.gz}} --directory={{path/to/directory}} .`",
+                "text": "tar czf {{target.tar.gz}} --directory={{path/to/directory}} ."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "- E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "- E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+                "task": false,
+                "loose": false,
+                "text": "E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+                        "text": "E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+                                "text": "E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "`tar xvf {{source.tar[.gz|.bz2|.xz]}}`",
+        "text": "`tar xvf {{source.tar[.gz|.bz2|.xz]}}`",
+        "tokens": [
+            {
+                "type": "codespan",
+                "raw": "`tar xvf {{source.tar[.gz|.bz2|.xz]}}`",
+                "text": "tar xvf {{source.tar[.gz|.bz2|.xz]}}"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "- E[x]tract a (compressed) archive [f]ile into the target directory:",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "- E[x]tract a (compressed) archive [f]ile into the target directory:",
+                "task": false,
+                "loose": false,
+                "text": "E[x]tract a (compressed) archive [f]ile into the target directory:",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "E[x]tract a (compressed) archive [f]ile into the target directory:",
+                        "text": "E[x]tract a (compressed) archive [f]ile into the target directory:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "E[x]tract a (compressed) archive [f]ile into the target directory:",
+                                "text": "E[x]tract a (compressed) archive [f]ile into the target directory:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "`tar xf {{source.tar[.gz|.bz2|.xz]}} --directory={{path/to/directory}}`",
+        "text": "`tar xf {{source.tar[.gz|.bz2|.xz]}} --directory={{path/to/directory}}`",
+        "tokens": [
+            {
+                "type": "codespan",
+                "raw": "`tar xf {{source.tar[.gz|.bz2|.xz]}} --directory={{path/to/directory}}`",
+                "text": "tar xf {{source.tar[.gz|.bz2|.xz]}} --directory={{path/to/directory}}"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "- [c]reate a compressed archive and write it to a [f]ile, using [a]rchive suffix to determine the compression program:",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "- [c]reate a compressed archive and write it to a [f]ile, using [a]rchive suffix to determine the compression program:",
+                "task": false,
+                "loose": false,
+                "text": "[c]reate a compressed archive and write it to a [f]ile, using [a]rchive suffix to determine the compression program:",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "[c]reate a compressed archive and write it to a [f]ile, using [a]rchive suffix to determine the compression program:",
+                        "text": "[c]reate a compressed archive and write it to a [f]ile, using [a]rchive suffix to determine the compression program:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "[c]reate a compressed archive and write it to a [f]ile, using [a]rchive suffix to determine the compression program:",
+                                "text": "[c]reate a compressed archive and write it to a [f]ile, using [a]rchive suffix to determine the compression program:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "`tar caf {{target.tar.xz}} {{file1}} {{file2}} {{file3}}`",
+        "text": "`tar caf {{target.tar.xz}} {{file1}} {{file2}} {{file3}}`",
+        "tokens": [
+            {
+                "type": "codespan",
+                "raw": "`tar caf {{target.tar.xz}} {{file1}} {{file2}} {{file3}}`",
+                "text": "tar caf {{target.tar.xz}} {{file1}} {{file2}} {{file3}}"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "- Lis[t] the contents of a tar [f]ile [v]erbosely:",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "- Lis[t] the contents of a tar [f]ile [v]erbosely:",
+                "task": false,
+                "loose": false,
+                "text": "Lis[t] the contents of a tar [f]ile [v]erbosely:",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Lis[t] the contents of a tar [f]ile [v]erbosely:",
+                        "text": "Lis[t] the contents of a tar [f]ile [v]erbosely:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "Lis[t] the contents of a tar [f]ile [v]erbosely:",
+                                "text": "Lis[t] the contents of a tar [f]ile [v]erbosely:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "`tar tvf {{source.tar}}`",
+        "text": "`tar tvf {{source.tar}}`",
+        "tokens": [
+            {
+                "type": "codespan",
+                "raw": "`tar tvf {{source.tar}}`",
+                "text": "tar tvf {{source.tar}}"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "- E[x]tract files matching a pattern from an archive [f]ile:",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "- E[x]tract files matching a pattern from an archive [f]ile:",
+                "task": false,
+                "loose": false,
+                "text": "E[x]tract files matching a pattern from an archive [f]ile:",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "E[x]tract files matching a pattern from an archive [f]ile:",
+                        "text": "E[x]tract files matching a pattern from an archive [f]ile:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "E[x]tract files matching a pattern from an archive [f]ile:",
+                                "text": "E[x]tract files matching a pattern from an archive [f]ile:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "`tar xf {{source.tar}} --wildcards \"{{*.html}}\"`\n",
+        "text": "`tar xf {{source.tar}} --wildcards \"{{*.html}}\"`",
+        "tokens": [
+            {
+                "type": "codespan",
+                "raw": "`tar xf {{source.tar}} --wildcards \"{{*.html}}\"`",
+                "text": "tar xf {{source.tar}} --wildcards &quot;{{*.html}}&quot;"
+            }
+        ]
+    }
+]

@@ -1,5 +1,5 @@
 <template>
-  <n-config-provider :theme="theme">
+  <n-config-provider :theme="theme" :hljs="hljs">
     <n-global-style />
     <n-message-provider>
       <div class="app">
@@ -21,6 +21,7 @@ import {
 import { RouterView } from "vue-router";
 import { computed } from "vue";
 import TheHeader from "@/components/header/TheHeader.vue";
+import hljs from "highlight.js/lib/core";
 
 const osThemeRef = useOsTheme();
 const theme = computed(() => (osThemeRef.value === "dark" ? darkTheme : null));

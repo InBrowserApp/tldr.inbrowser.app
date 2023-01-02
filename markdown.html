@@ -1,0 +1,38 @@
+<h1 id="tar">tar</h1>
+<blockquote>
+<p>Archiving utility.
+Often combined with a compression method, such as gzip or bzip2.
+More information: <a href="https://www.gnu.org/software/tar">https://www.gnu.org/software/tar</a>.</p>
+</blockquote>
+<ul>
+<li>[c]reate an archive and write it to a [f]ile:</li>
+</ul>
+<p><code>tar cf {{target.tar}} {{file1}} {{file2}} {{file3}}</code></p>
+<ul>
+<li>[c]reate a g[z]ipped archive and write it to a [f]ile:</li>
+</ul>
+<p><code>tar czf {{target.tar.gz}} {{file1}} {{file2}} {{file3}}</code></p>
+<ul>
+<li>[c]reate a g[z]ipped archive from a directory using relative paths:</li>
+</ul>
+<p><code>tar czf {{target.tar.gz}} --directory={{path/to/directory}} .</code></p>
+<ul>
+<li>E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:</li>
+</ul>
+<p><code>tar xvf {{source.tar[.gz|.bz2|.xz]}}</code></p>
+<ul>
+<li>E[x]tract a (compressed) archive [f]ile into the target directory:</li>
+</ul>
+<p><code>tar xf {{source.tar[.gz|.bz2|.xz]}} --directory={{path/to/directory}}</code></p>
+<ul>
+<li>[c]reate a compressed archive and write it to a [f]ile, using [a]rchive suffix to determine the compression program:</li>
+</ul>
+<p><code>tar caf {{target.tar.xz}} {{file1}} {{file2}} {{file3}}</code></p>
+<ul>
+<li>Lis[t] the contents of a tar [f]ile [v]erbosely:</li>
+</ul>
+<p><code>tar tvf {{source.tar}}</code></p>
+<ul>
+<li>E[x]tract files matching a pattern from an archive [f]ile:</li>
+</ul>
+<p><code>tar xf {{source.tar}} --wildcards &quot;{{*.html}}&quot;</code></p>

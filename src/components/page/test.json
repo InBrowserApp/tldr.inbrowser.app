@@ -1,0 +1,2192 @@
+[
+    {
+        "type": "heading",
+        "raw": "An h1 header\n============\n\n",
+        "depth": 1,
+        "text": "An h1 header",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "An h1 header",
+                "text": "An h1 header"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "raw": "Paragraphs are separated by a blank line.",
+        "text": "Paragraphs are separated by a blank line.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Paragraphs are separated by a blank line.",
+                "text": "Paragraphs are separated by a blank line."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists\nlook like:",
+        "text": "2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists\nlook like:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "2nd paragraph. ",
+                "text": "2nd paragraph. "
+            },
+            {
+                "type": "em",
+                "raw": "*Italic*",
+                "text": "Italic",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Italic",
+                        "text": "Italic"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ", ",
+                "text": ", "
+            },
+            {
+                "type": "strong",
+                "raw": "**bold**",
+                "text": "bold",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "bold",
+                        "text": "bold"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ", and ",
+                "text": ", and "
+            },
+            {
+                "type": "codespan",
+                "raw": "`monospace`",
+                "text": "monospace"
+            },
+            {
+                "type": "text",
+                "raw": ". Itemized lists\nlook like:",
+                "text": ". Itemized lists\nlook like:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "  * this one\n  * that one\n  * the other one",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "  * this one\n",
+                "task": false,
+                "loose": false,
+                "text": "this one",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "this one",
+                        "text": "this one",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "this one",
+                                "text": "this one"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": "  * that one\n",
+                "task": false,
+                "loose": false,
+                "text": "that one",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "that one",
+                        "text": "that one",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "that one",
+                                "text": "that one"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": "  * the other one",
+                "task": false,
+                "loose": false,
+                "text": "the other one",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "the other one",
+                        "text": "the other one",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "the other one",
+                                "text": "the other one"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Note that --- not considering the asterisk --- the actual text\ncontent starts at 4-columns in.",
+        "text": "Note that --- not considering the asterisk --- the actual text\ncontent starts at 4-columns in.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Note that --- not considering the asterisk --- the actual text\ncontent starts at 4-columns in.",
+                "text": "Note that --- not considering the asterisk --- the actual text\ncontent starts at 4-columns in."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "blockquote",
+        "raw": "> Block quotes are\n> written like so.\n>\n> They can span multiple paragraphs,\n> if you like.\n\n",
+        "tokens": [
+            {
+                "type": "paragraph",
+                "raw": "Block quotes are\nwritten like so.",
+                "text": "Block quotes are\nwritten like so.",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Block quotes are\nwritten like so.",
+                        "text": "Block quotes are\nwritten like so."
+                    }
+                ]
+            },
+            {
+                "type": "space",
+                "raw": "\n\n"
+            },
+            {
+                "type": "paragraph",
+                "raw": "They can span multiple paragraphs,\nif you like.\n",
+                "text": "They can span multiple paragraphs,\nif you like.",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "They can span multiple paragraphs,\nif you like.",
+                        "text": "They can span multiple paragraphs,\nif you like."
+                    }
+                ]
+            }
+        ],
+        "text": "Block quotes are\nwritten like so.\n\nThey can span multiple paragraphs,\nif you like.\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., \"it's all\nin chapters 12--14\"). Three dots ... will be converted to an ellipsis.\nUnicode is supported. ☺",
+        "text": "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., \"it's all\nin chapters 12--14\"). Three dots ... will be converted to an ellipsis.\nUnicode is supported. ☺",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., \"it's all\nin chapters 12--14\"). Three dots ... will be converted to an ellipsis.\nUnicode is supported. ☺",
+                "text": "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., &quot;it&#39;s all\nin chapters 12--14&quot;). Three dots ... will be converted to an ellipsis.\nUnicode is supported. ☺"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n\n\n"
+    },
+    {
+        "type": "heading",
+        "raw": "An h2 header\n------------\n\n",
+        "depth": 2,
+        "text": "An h2 header",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "An h2 header",
+                "text": "An h2 header"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "raw": "Here's a numbered list:",
+        "text": "Here's a numbered list:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Here's a numbered list:",
+                "text": "Here&#39;s a numbered list:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": " 1. first item\n 2. second item\n 3. third item",
+        "ordered": true,
+        "start": 1,
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": " 1. first item\n",
+                "task": false,
+                "loose": false,
+                "text": "first item",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "first item",
+                        "text": "first item",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "first item",
+                                "text": "first item"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": " 2. second item\n",
+                "task": false,
+                "loose": false,
+                "text": "second item",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "second item",
+                        "text": "second item",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "second item",
+                                "text": "second item"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": " 3. third item",
+                "task": false,
+                "loose": false,
+                "text": "third item",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "third item",
+                        "text": "third item",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "third item",
+                                "text": "third item"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Note again how the actual text starts at 4 columns in (4 characters\nfrom the left side). Here's a code sample:",
+        "text": "Note again how the actual text starts at 4 columns in (4 characters\nfrom the left side). Here's a code sample:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Note again how the actual text starts at 4 columns in (4 characters\nfrom the left side). Here's a code sample:",
+                "text": "Note again how the actual text starts at 4 columns in (4 characters\nfrom the left side). Here&#39;s a code sample:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "code",
+        "raw": "    # Let me re-iterate ...\n    for i in 1 .. 10 { do-something(i) }\n\n",
+        "codeBlockStyle": "indented",
+        "text": "# Let me re-iterate ...\nfor i in 1 .. 10 { do-something(i) }"
+    },
+    {
+        "type": "paragraph",
+        "raw": "As you probably guessed, indented 4 spaces. By the way, instead of\nindenting the block, you can use delimited blocks, if you like:",
+        "text": "As you probably guessed, indented 4 spaces. By the way, instead of\nindenting the block, you can use delimited blocks, if you like:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "As you probably guessed, indented 4 spaces. By the way, instead of\nindenting the block, you can use delimited blocks, if you like:",
+                "text": "As you probably guessed, indented 4 spaces. By the way, instead of\nindenting the block, you can use delimited blocks, if you like:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "code",
+        "raw": "~~~\ndefine foobar() {\n    print \"Welcome to flavor country!\";\n}\n~~~",
+        "lang": "",
+        "text": "define foobar() {\n    print \"Welcome to flavor country!\";\n}"
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "(which makes copying & pasting easier). You can optionally mark the\ndelimited block for Pandoc to syntax highlight it:",
+        "text": "(which makes copying & pasting easier). You can optionally mark the\ndelimited block for Pandoc to syntax highlight it:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "(which makes copying & pasting easier). You can optionally mark the\ndelimited block for Pandoc to syntax highlight it:",
+                "text": "(which makes copying &amp; pasting easier). You can optionally mark the\ndelimited block for Pandoc to syntax highlight it:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "code",
+        "raw": "~~~python\nimport time\n# Quick, count to ten!\nfor i in range(10):\n    # (but not *too* quick)\n    time.sleep(0.5)\n    print(i)\n~~~",
+        "lang": "python",
+        "text": "import time\n# Quick, count to ten!\nfor i in range(10):\n    # (but not *too* quick)\n    time.sleep(0.5)\n    print(i)"
+    },
+    {
+        "type": "space",
+        "raw": "\n\n\n\n"
+    },
+    {
+        "type": "heading",
+        "raw": "### An h3 header ###\n\n",
+        "depth": 3,
+        "text": "An h3 header",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "An h3 header",
+                "text": "An h3 header"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "raw": "Now a nested list:",
+        "text": "Now a nested list:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Now a nested list:",
+                "text": "Now a nested list:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": " 1. First, get these ingredients:\n\n      * carrots\n      * celery\n      * lentils\n\n 2. Boil some water.\n\n 3. Dump everything in the pot and follow\n    this algorithm:\n\n        find wooden spoon\n        uncover pot\n        stir\n        cover pot\n        balance wooden spoon precariously on pot handle\n        wait 10 minutes\n        goto first step (or shut off burner when done)\n\n    Do not bump wooden spoon or it will fall.",
+        "ordered": true,
+        "start": 1,
+        "loose": true,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": " 1. First, get these ingredients:\n\n      * carrots\n      * celery\n      * lentils\n\n",
+                "task": false,
+                "loose": true,
+                "text": "First, get these ingredients:\n\n  * carrots\n  * celery\n  * lentils\n",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "First, get these ingredients:",
+                        "text": "First, get these ingredients:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "First, get these ingredients:",
+                                "text": "First, get these ingredients:"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "space",
+                        "raw": "\n\n"
+                    },
+                    {
+                        "type": "list",
+                        "raw": "  * carrots\n  * celery\n  * lentils\n",
+                        "ordered": false,
+                        "start": "",
+                        "loose": false,
+                        "items": [
+                            {
+                                "type": "list_item",
+                                "raw": "  * carrots\n",
+                                "task": false,
+                                "loose": false,
+                                "text": "carrots",
+                                "tokens": [
+                                    {
+                                        "type": "text",
+                                        "raw": "carrots",
+                                        "text": "carrots",
+                                        "tokens": [
+                                            {
+                                                "type": "text",
+                                                "raw": "carrots",
+                                                "text": "carrots"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "raw": "  * celery\n",
+                                "task": false,
+                                "loose": false,
+                                "text": "celery",
+                                "tokens": [
+                                    {
+                                        "type": "text",
+                                        "raw": "celery",
+                                        "text": "celery",
+                                        "tokens": [
+                                            {
+                                                "type": "text",
+                                                "raw": "celery",
+                                                "text": "celery"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "raw": "  * lentils",
+                                "task": false,
+                                "loose": false,
+                                "text": "lentils",
+                                "tokens": [
+                                    {
+                                        "type": "text",
+                                        "raw": "lentils",
+                                        "text": "lentils",
+                                        "tokens": [
+                                            {
+                                                "type": "text",
+                                                "raw": "lentils",
+                                                "text": "lentils"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": " 2. Boil some water.\n\n",
+                "task": false,
+                "loose": true,
+                "text": "Boil some water.\n",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Boil some water.\n",
+                        "text": "Boil some water.",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "Boil some water.",
+                                "text": "Boil some water."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": " 3. Dump everything in the pot and follow\n    this algorithm:\n\n        find wooden spoon\n        uncover pot\n        stir\n        cover pot\n        balance wooden spoon precariously on pot handle\n        wait 10 minutes\n        goto first step (or shut off burner when done)\n\n    Do not bump wooden spoon or it will fall.",
+                "task": false,
+                "loose": true,
+                "text": "Dump everything in the pot and follow\nthis algorithm:\n\n    find wooden spoon\n    uncover pot\n    stir\n    cover pot\n    balance wooden spoon precariously on pot handle\n    wait 10 minutes\n    goto first step (or shut off burner when done)\n\nDo not bump wooden spoon or it will fall.",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Dump everything in the pot and follow\n\nthis algorithm:",
+                        "text": "Dump everything in the pot and follow\nthis algorithm:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "Dump everything in the pot and follow\nthis algorithm:",
+                                "text": "Dump everything in the pot and follow\nthis algorithm:"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "space",
+                        "raw": "\n\n"
+                    },
+                    {
+                        "type": "code",
+                        "raw": "    find wooden spoon\n    uncover pot\n    stir\n    cover pot\n    balance wooden spoon precariously on pot handle\n    wait 10 minutes\n    goto first step (or shut off burner when done)\n\n",
+                        "codeBlockStyle": "indented",
+                        "text": "find wooden spoon\nuncover pot\nstir\ncover pot\nbalance wooden spoon precariously on pot handle\nwait 10 minutes\ngoto first step (or shut off burner when done)"
+                    },
+                    {
+                        "type": "text",
+                        "raw": "Do not bump wooden spoon or it will fall.",
+                        "text": "Do not bump wooden spoon or it will fall.",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "Do not bump wooden spoon or it will fall.",
+                                "text": "Do not bump wooden spoon or it will fall."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Notice again how text always lines up on 4-space indents (including\nthat last line which continues item 3 above).",
+        "text": "Notice again how text always lines up on 4-space indents (including\nthat last line which continues item 3 above).",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Notice again how text always lines up on 4-space indents (including\nthat last line which continues item 3 above).",
+                "text": "Notice again how text always lines up on 4-space indents (including\nthat last line which continues item 3 above)."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Here's a link to [a website](http://foo.bar), to a [local\ndoc](local-doc.html), and to a [section heading in the current\ndoc](#an-h2-header). Here's a footnote [^1].",
+        "text": "Here's a link to [a website](http://foo.bar), to a [local\ndoc](local-doc.html), and to a [section heading in the current\ndoc](#an-h2-header). Here's a footnote [^1].",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Here's a link to ",
+                "text": "Here&#39;s a link to "
+            },
+            {
+                "type": "link",
+                "raw": "[a website](http://foo.bar)",
+                "href": "http://foo.bar",
+                "title": null,
+                "text": "a website",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "a website",
+                        "text": "a website"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ", to a ",
+                "text": ", to a "
+            },
+            {
+                "type": "link",
+                "raw": "[local\ndoc](local-doc.html)",
+                "href": "local-doc.html",
+                "title": null,
+                "text": "local\ndoc",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "local\ndoc",
+                        "text": "local\ndoc"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ", and to a ",
+                "text": ", and to a "
+            },
+            {
+                "type": "link",
+                "raw": "[section heading in the current\ndoc](#an-h2-header)",
+                "href": "#an-h2-header",
+                "title": null,
+                "text": "section heading in the current\ndoc",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "section heading in the current\ndoc",
+                        "text": "section heading in the current\ndoc"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ". Here's a footnote [^1].",
+                "text": ". Here&#39;s a footnote [^1]."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "[^1]: Some footnote text.",
+        "text": "[^1]: Some footnote text.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "[^1]: Some footnote text.",
+                "text": "[^1]: Some footnote text."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Tables can look like this:",
+        "text": "Tables can look like this:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Tables can look like this:",
+                "text": "Tables can look like this:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Name           Size  Material      Color\n",
+        "text": "Name           Size  Material      Color",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Name           Size  Material      Color",
+                "text": "Name           Size  Material      Color"
+            }
+        ]
+    },
+    {
+        "type": "hr",
+        "raw": "------------- -----  ------------  ------------\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "All Business      9  leather       brown\nRoundabout       10  hemp canvas   natural\nCinderella       11  glass         transparent",
+        "text": "All Business      9  leather       brown\nRoundabout       10  hemp canvas   natural\nCinderella       11  glass         transparent",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "All Business      9  leather       brown\nRoundabout       10  hemp canvas   natural\nCinderella       11  glass         transparent",
+                "text": "All Business      9  leather       brown\nRoundabout       10  hemp canvas   natural\nCinderella       11  glass         transparent"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Table: Shoes sizes, materials, and colors.",
+        "text": "Table: Shoes sizes, materials, and colors.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Table: Shoes sizes, materials, and colors.",
+                "text": "Table: Shoes sizes, materials, and colors."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "(The above is the caption for the table.) Pandoc also supports\nmulti-line tables:",
+        "text": "(The above is the caption for the table.) Pandoc also supports\nmulti-line tables:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "(The above is the caption for the table.) Pandoc also supports\nmulti-line tables:",
+                "text": "(The above is the caption for the table.) Pandoc also supports\nmulti-line tables:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "hr",
+        "raw": "--------  -----------------------\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Keyword   Text\n",
+        "text": "Keyword   Text",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Keyword   Text",
+                "text": "Keyword   Text"
+            }
+        ]
+    },
+    {
+        "type": "hr",
+        "raw": "--------  -----------------------\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "red       Sunsets, apples, and\n          other red or reddish\n          things.",
+        "text": "red       Sunsets, apples, and\n          other red or reddish\n          things.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "red       Sunsets, apples, and\n          other red or reddish\n          things.",
+                "text": "red       Sunsets, apples, and\n          other red or reddish\n          things."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "green     Leaves, grass, frogs\n          and other things it's\n          not easy being.\n",
+        "text": "green     Leaves, grass, frogs\n          and other things it's\n          not easy being.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "green     Leaves, grass, frogs\n          and other things it's\n          not easy being.",
+                "text": "green     Leaves, grass, frogs\n          and other things it&#39;s\n          not easy being."
+            }
+        ]
+    },
+    {
+        "type": "hr",
+        "raw": "--------  -----------------------\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "A horizontal rule follows.",
+        "text": "A horizontal rule follows.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "A horizontal rule follows.",
+                "text": "A horizontal rule follows."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "hr",
+        "raw": "***\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Here's a definition list:",
+        "text": "Here's a definition list:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Here's a definition list:",
+                "text": "Here&#39;s a definition list:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "apples\n  : Good for making applesauce.",
+        "text": "apples\n  : Good for making applesauce.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "apples\n  : Good for making applesauce.",
+                "text": "apples\n  : Good for making applesauce."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "oranges\n  : Citrus!",
+        "text": "oranges\n  : Citrus!",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "oranges\n  : Citrus!",
+                "text": "oranges\n  : Citrus!"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "tomatoes\n  : There's no \"e\" in tomatoe.",
+        "text": "tomatoes\n  : There's no \"e\" in tomatoe.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "tomatoes\n  : There's no \"e\" in tomatoe.",
+                "text": "tomatoes\n  : There&#39;s no &quot;e&quot; in tomatoe."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Again, text is indented 4 spaces. (Put a blank line between each\nterm and  its definition to spread things out more.)",
+        "text": "Again, text is indented 4 spaces. (Put a blank line between each\nterm and  its definition to spread things out more.)",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Again, text is indented 4 spaces. (Put a blank line between each\nterm and  its definition to spread things out more.)",
+                "text": "Again, text is indented 4 spaces. (Put a blank line between each\nterm and  its definition to spread things out more.)"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Here's a \"line block\" (note how whitespace is honored):",
+        "text": "Here's a \"line block\" (note how whitespace is honored):",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Here's a \"line block\" (note how whitespace is honored):",
+                "text": "Here&#39;s a &quot;line block&quot; (note how whitespace is honored):"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "| Line one\n|   Line too\n| Line tree",
+        "text": "| Line one\n|   Line too\n| Line tree",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "| Line one\n|   Line too\n| Line tree",
+                "text": "| Line one\n|   Line too\n| Line tree"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "and images can be specified like so:",
+        "text": "and images can be specified like so:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "and images can be specified like so:",
+                "text": "and images can be specified like so:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "![example image](example-image.jpg \"An exemplary image\")",
+        "text": "![example image](example-image.jpg \"An exemplary image\")",
+        "tokens": [
+            {
+                "type": "image",
+                "raw": "![example image](example-image.jpg \"An exemplary image\")",
+                "href": "example-image.jpg",
+                "title": "An exemplary image",
+                "text": "example image"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Inline math equation: $\\omega = d\\phi / dt$. Display\nmath should get its own line like so:",
+        "text": "Inline math equation: $\\omega = d\\phi / dt$. Display\nmath should get its own line like so:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Inline math equation: $\\omega = d\\phi / dt$. Display\nmath should get its own line like so:",
+                "text": "Inline math equation: $\\omega = d\\phi / dt$. Display\nmath should get its own line like so:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "$$I = \\int \\rho R^{2} dV$$",
+        "text": "$$I = \\int \\rho R^{2} dV$$",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "$$I = \\int \\rho R^{2} dV$$",
+                "text": "$$I = \\int \\rho R^{2} dV$$"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "heading",
+        "raw": "And note that you can backslash-escape any punctuation characters\nwhich you wish to be displayed literally, ex.: \\`foo\\`, \\*bar\\*, etc.An h1 header\n============\n\n",
+        "depth": 1,
+        "text": "And note that you can backslash-escape any punctuation characters\nwhich you wish to be displayed literally, ex.: \\`foo\\`, \\*bar\\*, etc.An h1 header",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "And note that you can backslash-escape any punctuation characters\nwhich you wish to be displayed literally, ex.: ",
+                "text": "And note that you can backslash-escape any punctuation characters\nwhich you wish to be displayed literally, ex.: "
+            },
+            {
+                "type": "escape",
+                "raw": "\\`",
+                "text": "`"
+            },
+            {
+                "type": "text",
+                "raw": "foo",
+                "text": "foo"
+            },
+            {
+                "type": "escape",
+                "raw": "\\`",
+                "text": "`"
+            },
+            {
+                "type": "text",
+                "raw": ", ",
+                "text": ", "
+            },
+            {
+                "type": "escape",
+                "raw": "\\*",
+                "text": "*"
+            },
+            {
+                "type": "text",
+                "raw": "bar",
+                "text": "bar"
+            },
+            {
+                "type": "escape",
+                "raw": "\\*",
+                "text": "*"
+            },
+            {
+                "type": "text",
+                "raw": ", etc.An h1 header",
+                "text": ", etc.An h1 header"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "raw": "Paragraphs are separated by a blank line.",
+        "text": "Paragraphs are separated by a blank line.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Paragraphs are separated by a blank line.",
+                "text": "Paragraphs are separated by a blank line."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists\nlook like:",
+        "text": "2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists\nlook like:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "2nd paragraph. ",
+                "text": "2nd paragraph. "
+            },
+            {
+                "type": "em",
+                "raw": "*Italic*",
+                "text": "Italic",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Italic",
+                        "text": "Italic"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ", ",
+                "text": ", "
+            },
+            {
+                "type": "strong",
+                "raw": "**bold**",
+                "text": "bold",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "bold",
+                        "text": "bold"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ", and ",
+                "text": ", and "
+            },
+            {
+                "type": "codespan",
+                "raw": "`monospace`",
+                "text": "monospace"
+            },
+            {
+                "type": "text",
+                "raw": ". Itemized lists\nlook like:",
+                "text": ". Itemized lists\nlook like:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": "  * this one\n  * that one\n  * the other one",
+        "ordered": false,
+        "start": "",
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": "  * this one\n",
+                "task": false,
+                "loose": false,
+                "text": "this one",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "this one",
+                        "text": "this one",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "this one",
+                                "text": "this one"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": "  * that one\n",
+                "task": false,
+                "loose": false,
+                "text": "that one",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "that one",
+                        "text": "that one",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "that one",
+                                "text": "that one"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": "  * the other one",
+                "task": false,
+                "loose": false,
+                "text": "the other one",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "the other one",
+                        "text": "the other one",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "the other one",
+                                "text": "the other one"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Note that --- not considering the asterisk --- the actual text\ncontent starts at 4-columns in.",
+        "text": "Note that --- not considering the asterisk --- the actual text\ncontent starts at 4-columns in.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Note that --- not considering the asterisk --- the actual text\ncontent starts at 4-columns in.",
+                "text": "Note that --- not considering the asterisk --- the actual text\ncontent starts at 4-columns in."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "blockquote",
+        "raw": "> Block quotes are\n> written like so.\n>\n> They can span multiple paragraphs,\n> if you like.\n\n",
+        "tokens": [
+            {
+                "type": "paragraph",
+                "raw": "Block quotes are\nwritten like so.",
+                "text": "Block quotes are\nwritten like so.",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Block quotes are\nwritten like so.",
+                        "text": "Block quotes are\nwritten like so."
+                    }
+                ]
+            },
+            {
+                "type": "space",
+                "raw": "\n\n"
+            },
+            {
+                "type": "paragraph",
+                "raw": "They can span multiple paragraphs,\nif you like.\n",
+                "text": "They can span multiple paragraphs,\nif you like.",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "They can span multiple paragraphs,\nif you like.",
+                        "text": "They can span multiple paragraphs,\nif you like."
+                    }
+                ]
+            }
+        ],
+        "text": "Block quotes are\nwritten like so.\n\nThey can span multiple paragraphs,\nif you like.\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., \"it's all\nin chapters 12--14\"). Three dots ... will be converted to an ellipsis.\nUnicode is supported. ☺",
+        "text": "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., \"it's all\nin chapters 12--14\"). Three dots ... will be converted to an ellipsis.\nUnicode is supported. ☺",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., \"it's all\nin chapters 12--14\"). Three dots ... will be converted to an ellipsis.\nUnicode is supported. ☺",
+                "text": "Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., &quot;it&#39;s all\nin chapters 12--14&quot;). Three dots ... will be converted to an ellipsis.\nUnicode is supported. ☺"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n\n\n"
+    },
+    {
+        "type": "heading",
+        "raw": "An h2 header\n------------\n\n",
+        "depth": 2,
+        "text": "An h2 header",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "An h2 header",
+                "text": "An h2 header"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "raw": "Here's a numbered list:",
+        "text": "Here's a numbered list:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Here's a numbered list:",
+                "text": "Here&#39;s a numbered list:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": " 1. first item\n 2. second item\n 3. third item",
+        "ordered": true,
+        "start": 1,
+        "loose": false,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": " 1. first item\n",
+                "task": false,
+                "loose": false,
+                "text": "first item",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "first item",
+                        "text": "first item",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "first item",
+                                "text": "first item"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": " 2. second item\n",
+                "task": false,
+                "loose": false,
+                "text": "second item",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "second item",
+                        "text": "second item",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "second item",
+                                "text": "second item"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": " 3. third item",
+                "task": false,
+                "loose": false,
+                "text": "third item",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "third item",
+                        "text": "third item",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "third item",
+                                "text": "third item"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Note again how the actual text starts at 4 columns in (4 characters\nfrom the left side). Here's a code sample:",
+        "text": "Note again how the actual text starts at 4 columns in (4 characters\nfrom the left side). Here's a code sample:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Note again how the actual text starts at 4 columns in (4 characters\nfrom the left side). Here's a code sample:",
+                "text": "Note again how the actual text starts at 4 columns in (4 characters\nfrom the left side). Here&#39;s a code sample:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "code",
+        "raw": "    # Let me re-iterate ...\n    for i in 1 .. 10 { do-something(i) }\n\n",
+        "codeBlockStyle": "indented",
+        "text": "# Let me re-iterate ...\nfor i in 1 .. 10 { do-something(i) }"
+    },
+    {
+        "type": "paragraph",
+        "raw": "As you probably guessed, indented 4 spaces. By the way, instead of\nindenting the block, you can use delimited blocks, if you like:",
+        "text": "As you probably guessed, indented 4 spaces. By the way, instead of\nindenting the block, you can use delimited blocks, if you like:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "As you probably guessed, indented 4 spaces. By the way, instead of\nindenting the block, you can use delimited blocks, if you like:",
+                "text": "As you probably guessed, indented 4 spaces. By the way, instead of\nindenting the block, you can use delimited blocks, if you like:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "code",
+        "raw": "~~~\ndefine foobar() {\n    print \"Welcome to flavor country!\";\n}\n~~~",
+        "lang": "",
+        "text": "define foobar() {\n    print \"Welcome to flavor country!\";\n}"
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "(which makes copying & pasting easier). You can optionally mark the\ndelimited block for Pandoc to syntax highlight it:",
+        "text": "(which makes copying & pasting easier). You can optionally mark the\ndelimited block for Pandoc to syntax highlight it:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "(which makes copying & pasting easier). You can optionally mark the\ndelimited block for Pandoc to syntax highlight it:",
+                "text": "(which makes copying &amp; pasting easier). You can optionally mark the\ndelimited block for Pandoc to syntax highlight it:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "code",
+        "raw": "~~~python\nimport time\n# Quick, count to ten!\nfor i in range(10):\n    # (but not *too* quick)\n    time.sleep(0.5)\n    print(i)\n~~~",
+        "lang": "python",
+        "text": "import time\n# Quick, count to ten!\nfor i in range(10):\n    # (but not *too* quick)\n    time.sleep(0.5)\n    print(i)"
+    },
+    {
+        "type": "space",
+        "raw": "\n\n\n\n"
+    },
+    {
+        "type": "heading",
+        "raw": "### An h3 header ###\n\n",
+        "depth": 3,
+        "text": "An h3 header",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "An h3 header",
+                "text": "An h3 header"
+            }
+        ]
+    },
+    {
+        "type": "paragraph",
+        "raw": "Now a nested list:",
+        "text": "Now a nested list:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Now a nested list:",
+                "text": "Now a nested list:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "list",
+        "raw": " 1. First, get these ingredients:\n\n      * carrots\n      * celery\n      * lentils\n\n 2. Boil some water.\n\n 3. Dump everything in the pot and follow\n    this algorithm:\n\n        find wooden spoon\n        uncover pot\n        stir\n        cover pot\n        balance wooden spoon precariously on pot handle\n        wait 10 minutes\n        goto first step (or shut off burner when done)\n\n    Do not bump wooden spoon or it will fall.",
+        "ordered": true,
+        "start": 1,
+        "loose": true,
+        "items": [
+            {
+                "type": "list_item",
+                "raw": " 1. First, get these ingredients:\n\n      * carrots\n      * celery\n      * lentils\n\n",
+                "task": false,
+                "loose": true,
+                "text": "First, get these ingredients:\n\n  * carrots\n  * celery\n  * lentils\n",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "First, get these ingredients:",
+                        "text": "First, get these ingredients:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "First, get these ingredients:",
+                                "text": "First, get these ingredients:"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "space",
+                        "raw": "\n\n"
+                    },
+                    {
+                        "type": "list",
+                        "raw": "  * carrots\n  * celery\n  * lentils\n",
+                        "ordered": false,
+                        "start": "",
+                        "loose": false,
+                        "items": [
+                            {
+                                "type": "list_item",
+                                "raw": "  * carrots\n",
+                                "task": false,
+                                "loose": false,
+                                "text": "carrots",
+                                "tokens": [
+                                    {
+                                        "type": "text",
+                                        "raw": "carrots",
+                                        "text": "carrots",
+                                        "tokens": [
+                                            {
+                                                "type": "text",
+                                                "raw": "carrots",
+                                                "text": "carrots"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "raw": "  * celery\n",
+                                "task": false,
+                                "loose": false,
+                                "text": "celery",
+                                "tokens": [
+                                    {
+                                        "type": "text",
+                                        "raw": "celery",
+                                        "text": "celery",
+                                        "tokens": [
+                                            {
+                                                "type": "text",
+                                                "raw": "celery",
+                                                "text": "celery"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "list_item",
+                                "raw": "  * lentils",
+                                "task": false,
+                                "loose": false,
+                                "text": "lentils",
+                                "tokens": [
+                                    {
+                                        "type": "text",
+                                        "raw": "lentils",
+                                        "text": "lentils",
+                                        "tokens": [
+                                            {
+                                                "type": "text",
+                                                "raw": "lentils",
+                                                "text": "lentils"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": " 2. Boil some water.\n\n",
+                "task": false,
+                "loose": true,
+                "text": "Boil some water.\n",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Boil some water.\n",
+                        "text": "Boil some water.",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "Boil some water.",
+                                "text": "Boil some water."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list_item",
+                "raw": " 3. Dump everything in the pot and follow\n    this algorithm:\n\n        find wooden spoon\n        uncover pot\n        stir\n        cover pot\n        balance wooden spoon precariously on pot handle\n        wait 10 minutes\n        goto first step (or shut off burner when done)\n\n    Do not bump wooden spoon or it will fall.",
+                "task": false,
+                "loose": true,
+                "text": "Dump everything in the pot and follow\nthis algorithm:\n\n    find wooden spoon\n    uncover pot\n    stir\n    cover pot\n    balance wooden spoon precariously on pot handle\n    wait 10 minutes\n    goto first step (or shut off burner when done)\n\nDo not bump wooden spoon or it will fall.",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "Dump everything in the pot and follow\n\nthis algorithm:",
+                        "text": "Dump everything in the pot and follow\nthis algorithm:",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "Dump everything in the pot and follow\nthis algorithm:",
+                                "text": "Dump everything in the pot and follow\nthis algorithm:"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "space",
+                        "raw": "\n\n"
+                    },
+                    {
+                        "type": "code",
+                        "raw": "    find wooden spoon\n    uncover pot\n    stir\n    cover pot\n    balance wooden spoon precariously on pot handle\n    wait 10 minutes\n    goto first step (or shut off burner when done)\n\n",
+                        "codeBlockStyle": "indented",
+                        "text": "find wooden spoon\nuncover pot\nstir\ncover pot\nbalance wooden spoon precariously on pot handle\nwait 10 minutes\ngoto first step (or shut off burner when done)"
+                    },
+                    {
+                        "type": "text",
+                        "raw": "Do not bump wooden spoon or it will fall.",
+                        "text": "Do not bump wooden spoon or it will fall.",
+                        "tokens": [
+                            {
+                                "type": "text",
+                                "raw": "Do not bump wooden spoon or it will fall.",
+                                "text": "Do not bump wooden spoon or it will fall."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Notice again how text always lines up on 4-space indents (including\nthat last line which continues item 3 above).",
+        "text": "Notice again how text always lines up on 4-space indents (including\nthat last line which continues item 3 above).",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Notice again how text always lines up on 4-space indents (including\nthat last line which continues item 3 above).",
+                "text": "Notice again how text always lines up on 4-space indents (including\nthat last line which continues item 3 above)."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Here's a link to [a website](http://foo.bar), to a [local\ndoc](local-doc.html), and to a [section heading in the current\ndoc](#an-h2-header). Here's a footnote [^1].",
+        "text": "Here's a link to [a website](http://foo.bar), to a [local\ndoc](local-doc.html), and to a [section heading in the current\ndoc](#an-h2-header). Here's a footnote [^1].",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Here's a link to ",
+                "text": "Here&#39;s a link to "
+            },
+            {
+                "type": "link",
+                "raw": "[a website](http://foo.bar)",
+                "href": "http://foo.bar",
+                "title": null,
+                "text": "a website",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "a website",
+                        "text": "a website"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ", to a ",
+                "text": ", to a "
+            },
+            {
+                "type": "link",
+                "raw": "[local\ndoc](local-doc.html)",
+                "href": "local-doc.html",
+                "title": null,
+                "text": "local\ndoc",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "local\ndoc",
+                        "text": "local\ndoc"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ", and to a ",
+                "text": ", and to a "
+            },
+            {
+                "type": "link",
+                "raw": "[section heading in the current\ndoc](#an-h2-header)",
+                "href": "#an-h2-header",
+                "title": null,
+                "text": "section heading in the current\ndoc",
+                "tokens": [
+                    {
+                        "type": "text",
+                        "raw": "section heading in the current\ndoc",
+                        "text": "section heading in the current\ndoc"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "raw": ". Here's a footnote [^1].",
+                "text": ". Here&#39;s a footnote [^1]."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "[^1]: Some footnote text.",
+        "text": "[^1]: Some footnote text.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "[^1]: Some footnote text.",
+                "text": "[^1]: Some footnote text."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Tables can look like this:",
+        "text": "Tables can look like this:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Tables can look like this:",
+                "text": "Tables can look like this:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Name           Size  Material      Color\n",
+        "text": "Name           Size  Material      Color",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Name           Size  Material      Color",
+                "text": "Name           Size  Material      Color"
+            }
+        ]
+    },
+    {
+        "type": "hr",
+        "raw": "------------- -----  ------------  ------------\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "All Business      9  leather       brown\nRoundabout       10  hemp canvas   natural\nCinderella       11  glass         transparent",
+        "text": "All Business      9  leather       brown\nRoundabout       10  hemp canvas   natural\nCinderella       11  glass         transparent",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "All Business      9  leather       brown\nRoundabout       10  hemp canvas   natural\nCinderella       11  glass         transparent",
+                "text": "All Business      9  leather       brown\nRoundabout       10  hemp canvas   natural\nCinderella       11  glass         transparent"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Table: Shoes sizes, materials, and colors.",
+        "text": "Table: Shoes sizes, materials, and colors.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Table: Shoes sizes, materials, and colors.",
+                "text": "Table: Shoes sizes, materials, and colors."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "(The above is the caption for the table.) Pandoc also supports\nmulti-line tables:",
+        "text": "(The above is the caption for the table.) Pandoc also supports\nmulti-line tables:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "(The above is the caption for the table.) Pandoc also supports\nmulti-line tables:",
+                "text": "(The above is the caption for the table.) Pandoc also supports\nmulti-line tables:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "hr",
+        "raw": "--------  -----------------------\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Keyword   Text\n",
+        "text": "Keyword   Text",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Keyword   Text",
+                "text": "Keyword   Text"
+            }
+        ]
+    },
+    {
+        "type": "hr",
+        "raw": "--------  -----------------------\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "red       Sunsets, apples, and\n          other red or reddish\n          things.",
+        "text": "red       Sunsets, apples, and\n          other red or reddish\n          things.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "red       Sunsets, apples, and\n          other red or reddish\n          things.",
+                "text": "red       Sunsets, apples, and\n          other red or reddish\n          things."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "green     Leaves, grass, frogs\n          and other things it's\n          not easy being.\n",
+        "text": "green     Leaves, grass, frogs\n          and other things it's\n          not easy being.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "green     Leaves, grass, frogs\n          and other things it's\n          not easy being.",
+                "text": "green     Leaves, grass, frogs\n          and other things it&#39;s\n          not easy being."
+            }
+        ]
+    },
+    {
+        "type": "hr",
+        "raw": "--------  -----------------------\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "A horizontal rule follows.",
+        "text": "A horizontal rule follows.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "A horizontal rule follows.",
+                "text": "A horizontal rule follows."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "hr",
+        "raw": "***\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Here's a definition list:",
+        "text": "Here's a definition list:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Here's a definition list:",
+                "text": "Here&#39;s a definition list:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "apples\n  : Good for making applesauce.",
+        "text": "apples\n  : Good for making applesauce.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "apples\n  : Good for making applesauce.",
+                "text": "apples\n  : Good for making applesauce."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "oranges\n  : Citrus!",
+        "text": "oranges\n  : Citrus!",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "oranges\n  : Citrus!",
+                "text": "oranges\n  : Citrus!"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "tomatoes\n  : There's no \"e\" in tomatoe.",
+        "text": "tomatoes\n  : There's no \"e\" in tomatoe.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "tomatoes\n  : There's no \"e\" in tomatoe.",
+                "text": "tomatoes\n  : There&#39;s no &quot;e&quot; in tomatoe."
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Again, text is indented 4 spaces. (Put a blank line between each\nterm and  its definition to spread things out more.)",
+        "text": "Again, text is indented 4 spaces. (Put a blank line between each\nterm and  its definition to spread things out more.)",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Again, text is indented 4 spaces. (Put a blank line between each\nterm and  its definition to spread things out more.)",
+                "text": "Again, text is indented 4 spaces. (Put a blank line between each\nterm and  its definition to spread things out more.)"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Here's a \"line block\" (note how whitespace is honored):",
+        "text": "Here's a \"line block\" (note how whitespace is honored):",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Here's a \"line block\" (note how whitespace is honored):",
+                "text": "Here&#39;s a &quot;line block&quot; (note how whitespace is honored):"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "| Line one\n|   Line too\n| Line tree",
+        "text": "| Line one\n|   Line too\n| Line tree",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "| Line one\n|   Line too\n| Line tree",
+                "text": "| Line one\n|   Line too\n| Line tree"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "and images can be specified like so:",
+        "text": "and images can be specified like so:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "and images can be specified like so:",
+                "text": "and images can be specified like so:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "![example image](example-image.jpg \"An exemplary image\")",
+        "text": "![example image](example-image.jpg \"An exemplary image\")",
+        "tokens": [
+            {
+                "type": "image",
+                "raw": "![example image](example-image.jpg \"An exemplary image\")",
+                "href": "example-image.jpg",
+                "title": "An exemplary image",
+                "text": "example image"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "Inline math equation: $\\omega = d\\phi / dt$. Display\nmath should get its own line like so:",
+        "text": "Inline math equation: $\\omega = d\\phi / dt$. Display\nmath should get its own line like so:",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "Inline math equation: $\\omega = d\\phi / dt$. Display\nmath should get its own line like so:",
+                "text": "Inline math equation: $\\omega = d\\phi / dt$. Display\nmath should get its own line like so:"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "$$I = \\int \\rho R^{2} dV$$",
+        "text": "$$I = \\int \\rho R^{2} dV$$",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "$$I = \\int \\rho R^{2} dV$$",
+                "text": "$$I = \\int \\rho R^{2} dV$$"
+            }
+        ]
+    },
+    {
+        "type": "space",
+        "raw": "\n\n"
+    },
+    {
+        "type": "paragraph",
+        "raw": "And note that you can backslash-escape any punctuation characters\nwhich you wish to be displayed literally, ex.: \\`foo\\`, \\*bar\\*, etc.\n",
+        "text": "And note that you can backslash-escape any punctuation characters\nwhich you wish to be displayed literally, ex.: \\`foo\\`, \\*bar\\*, etc.",
+        "tokens": [
+            {
+                "type": "text",
+                "raw": "And note that you can backslash-escape any punctuation characters\nwhich you wish to be displayed literally, ex.: ",
+                "text": "And note that you can backslash-escape any punctuation characters\nwhich you wish to be displayed literally, ex.: "
+            },
+            {
+                "type": "escape",
+                "raw": "\\`",
+                "text": "`"
+            },
+            {
+                "type": "text",
+                "raw": "foo",
+                "text": "foo"
+            },
+            {
+                "type": "escape",
+                "raw": "\\`",
+                "text": "`"
+            },
+            {
+                "type": "text",
+                "raw": ", ",
+                "text": ", "
+            },
+            {
+                "type": "escape",
+                "raw": "\\*",
+                "text": "*"
+            },
+            {
+                "type": "text",
+                "raw": "bar",
+                "text": "bar"
+            },
+            {
+                "type": "escape",
+                "raw": "\\*",
+                "text": "*"
+            },
+            {
+                "type": "text",
+                "raw": ", etc.",
+                "text": ", etc."
+            }
+        ]
+    }
+]
