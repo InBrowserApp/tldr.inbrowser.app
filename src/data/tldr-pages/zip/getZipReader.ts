@@ -1,14 +1,17 @@
 import { BlobReader, ZipReader } from "@zip.js/zip.js";
 
-let zipReaderCache: ZipReader<unknown> | null = null;
+let zipReaderPromise: Promise<ZipReader<unknown>> | null = null;
 
 export async function getZipReader(): Promise<ZipReader<unknown>> {
-  if (zipReaderCache) return zipReaderCache;
+  if (zipReaderPromise) return await zipReaderPromise;
 
-  const response = await fetch("/tldr-pages.zip");
-  const zipFileBlob = await response.blob();
-  const zipFileReader = new BlobReader(zipFileBlob);
-  const zipReader = new ZipReader(zipFileReader);
-  zipReaderCache = zipReader;
-  return zipReader;
+  zipReaderPromise = (async () => {
+    const response = await fetch("/tldr-pages.zip");
+    const zipFileBlob = await response.blob();
+    const zipFileReader = new BlobReader(zipFileBlob);
+    const zipReader = new ZipReader(zipFileReader);
+    return zipReader;
+  })();
+
+  return await zipReaderPromise;
 }

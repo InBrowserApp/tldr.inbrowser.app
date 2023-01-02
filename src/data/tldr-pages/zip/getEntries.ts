@@ -1,28 +1,34 @@
 import { getZipReader } from "./getZipReader";
 import type { Entry } from "@zip.js/zip.js";
 
-let entriesCache: Entry[] | null = null;
+let entriesPromise: Promise<Entry[]> | null = null;
 
 export async function getEntries(): Promise<Entry[]> {
-  if (entriesCache) return entriesCache;
+  if (entriesPromise) return await entriesPromise;
 
-  const zipReader = await getZipReader();
-  const entries = await zipReader.getEntries();
-  entriesCache = entries;
-  return entries;
+  entriesPromise = (async () => {
+    const zipReader = await getZipReader();
+    const entries = await zipReader.getEntries();
+    return entries;
+  })();
+
+  return await entriesPromise;
 }
 
-let pagesEntriesCache: Entry[] | null = null;
+let pagesEntriesPromise: Promise<Entry[]> | null = null;
 
 export async function getPagesEntries(): Promise<Entry[]> {
-  if (pagesEntriesCache) return pagesEntriesCache;
+  if (pagesEntriesPromise) return await pagesEntriesPromise;
 
-  const entries = await getEntries();
-  const pagesEntries = entries.filter(
-    (entry) =>
-      entry.filename.startsWith("tldr-main/pages") &&
-      entry.filename.endsWith(".md")
-  );
-  pagesEntriesCache = pagesEntries;
-  return pagesEntries;
+  pagesEntriesPromise = (async () => {
+    const entries = await getEntries();
+    const pagesEntries = entries.filter(
+      (entry) =>
+        entry.filename.startsWith("tldr-main/pages") &&
+        entry.filename.endsWith(".md")
+    );
+    return pagesEntries;
+  })();
+
+  return await pagesEntriesPromise;
 }
