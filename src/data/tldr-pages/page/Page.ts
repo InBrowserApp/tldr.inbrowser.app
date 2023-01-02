@@ -6,6 +6,7 @@ export class Page {
 
   private textPromise: Promise<string> | undefined = undefined;
   private commandPromise: Promise<string> | undefined = undefined;
+  private descriptionPromise: Promise<string> | undefined = undefined;
 
   constructor(entry: Entry) {
     this.entry = entry;
@@ -78,5 +79,20 @@ export class Page {
   get platform(): string {
     const path = this.path;
     return path.split("/")[2];
+  }
+
+  get description(): Promise<string> {
+    if (this.descriptionPromise) return this.descriptionPromise;
+
+    this.descriptionPromise = (async () => {
+      const text = await this.text();
+
+      // regex get > quote multi line
+      const descriptionParts = [...text.matchAll(/\n> (.*)/g)];
+      const description = descriptionParts.map((part) => part[1]).join(" ");
+      return description;
+    })();
+
+    return this.descriptionPromise;
   }
 }
