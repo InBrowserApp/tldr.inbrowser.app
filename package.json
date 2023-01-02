@@ -9,7 +9,8 @@
     "test:unit": "vitest --environment jsdom --root src/",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "download:tldr-pages": "wget -O public/tldr-pages.zip https://github.com/tldr-pages/tldr/archive/refs/heads/main.zip"
   },
   "dependencies": {
     "pinia": "^2.0.28",

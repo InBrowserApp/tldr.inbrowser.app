@@ -26,3 +26,5 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+/public/tldr-pages.zip
