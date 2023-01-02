@@ -1,10 +1,9 @@
-import { getPagesEntries } from "../zip";
-import { Page } from "./Page";
+import type { Page } from "./Page";
+import { getPages } from "./getPages";
 
 export async function getPage(path: string): Promise<Page> {
-  const entries = await getPagesEntries();
-  const filename = `tldr-main${path}.md`;
-  const entry = entries.find((entry) => entry.filename === filename);
-  if (!entry) throw new Error(`Page not found: ${path}`);
-  return new Page(entry);
+  const pages = await getPages();
+  const page = pages.find((page) => page.path === path);
+  if (!page) throw new Error(`Page not found: ${path}`);
+  return page;
 }
