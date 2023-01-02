@@ -7,10 +7,12 @@ import FindOnGitHub from "@/components/page/FindOnGitHub.vue";
 import PageLanguage from "@/components/page/PageLanguage.vue";
 import PagePlatform from "@/components/page/PagePlatform.vue";
 import { usePage } from "@/data/tldr-pages/composables/usePage";
+import { usePageViewMetadata } from "./usePageViewMetadata";
 
 const route = useRoute();
 
 const { page, markdown } = usePage(toRef(route, "path"));
+usePageViewMetadata(toRef(route, "path"), page);
 </script>
 
 <template>
