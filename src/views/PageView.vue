@@ -12,8 +12,9 @@ const markdown = computedAsync<string | undefined | null>(
   async () => {
     try {
       const page = await getPage(route.path);
+      console.debug(page);
       const text = await page.getText();
-      console.log(text);
+      console.debug(text);
       return text;
     } catch (error) {
       console.error(error);
