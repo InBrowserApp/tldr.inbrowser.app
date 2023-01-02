@@ -13,15 +13,31 @@ export async function searchPages(
   const query = query_.trim().replace(" ", "-");
   const pages = await getPages();
 
-  const prefixResult = pages.filter((page) => {
-    return page.path.toLowerCase().includes("/" + query.toLowerCase());
+  const exactResult = pages.filter((page) => {
+    return page.basename.toLowerCase() === query.toLowerCase();
   });
+
+  const sortedExactResult = sortPages(exactResult);
+
+  const prefixResult = pages.filter((page) => {
+    return page.basename.toLowerCase().startsWith(query.toLowerCase());
+  });
+
+  const sortedPrefixResult = sortPages(prefixResult);
 
   const anyResult = pages.filter((page) => {
-    return page.path.toLowerCase().includes(query.toLowerCase());
+    return page.basename.toLowerCase().includes(query.toLowerCase());
   });
 
-  let result = [...new Set([...prefixResult, ...anyResult])];
+  const sortedAnyResult = sortPages(anyResult);
+
+  let result = [
+    ...new Set([
+      ...sortedExactResult,
+      ...sortedPrefixResult,
+      ...sortedAnyResult,
+    ]),
+  ];
 
   // filter by language
   if (options?.language) {
@@ -31,8 +47,6 @@ export async function searchPages(
   if (options?.platform) {
     result = filterByPlatform(result, options.platform);
   }
-
-  result = sortPages(result);
 
   // limit entries size
   result = result.slice(0, options?.size ?? 20);

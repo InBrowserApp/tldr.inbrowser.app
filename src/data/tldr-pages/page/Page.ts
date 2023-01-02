@@ -40,6 +40,12 @@ export class Page {
     return command;
   }
 
+  get basename(): string {
+    const filenameParts = this.filename.split("/");
+    const command = filenameParts[filenameParts.length - 1].split(".")[0];
+    return command;
+  }
+
   // path: /pages.zh/common/cat.md
   // return "zh"
   get language(): string {
