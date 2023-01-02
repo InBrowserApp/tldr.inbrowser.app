@@ -1,6 +1,4 @@
-import { Page } from "../page";
-import { getPagesEntries } from "../zip";
-import type { Entry } from "@zip.js/zip.js";
+import { Page, getPages } from "../page";
 
 export interface SearchOptions {
   size?: number;
@@ -13,38 +11,37 @@ export async function searchPages(
   options?: SearchOptions
 ): Promise<Page[]> {
   const query = query_.trim().replace(" ", "-");
+  const pages = await getPages();
 
-  let entries = await getPagesEntries();
-  entries = entries.filter((entry) => {
-    return entry.filename.toLowerCase().includes(query.toLowerCase());
+  let result = pages.filter((page) => {
+    return page.path.toLowerCase().includes(query.toLowerCase());
   });
 
   // filter by language
   if (options?.language) {
-    entries = filterByLanguage(entries, options.language);
+    result = filterByLanguage(result, options.language);
   }
 
   if (options?.platform) {
-    entries = filterByPlatform(entries, options.platform);
+    result = filterByPlatform(result, options.platform);
   }
 
-  // limit entries size
-  entries = entries.slice(0, options?.size ?? 20);
+  result = sortPages(result);
 
-  const pages = entries.map((entry) => new Page(entry));
-  return pages;
+  // limit entries size
+  result = result.slice(0, options?.size ?? 20);
+
+  return result;
 }
 
 // filter by language
 // for example: ["", "de"]
-function filterByLanguage(entries: Entry[], languages: string[]): Entry[] {
-  return entries.filter((entry) => {
+function filterByLanguage(pages: Page[], languages: string[]): Page[] {
+  return pages.filter((page) => {
     for (const language of languages) {
-      if (language === "") {
-        if (entry.filename.includes("/pages/")) return true;
+      if (language === page.language) {
+        return true;
       }
-
-      if (entry.filename.includes(`/pages.${language}/`)) return true;
     }
     return false;
   });
@@ -52,11 +49,41 @@ function filterByLanguage(entries: Entry[], languages: string[]): Entry[] {
 
 // filter by platform
 // for example: ["common", "linux"]
-function filterByPlatform(entries: Entry[], platforms: string[]): Entry[] {
-  return entries.filter((entry) => {
+function filterByPlatform(pages: Page[], platforms: string[]): Page[] {
+  return pages.filter((page) => {
     for (const platform of platforms) {
-      if (entry.filename.includes(`/${platform}/`)) return true;
+      if (platform === page.platform) {
+        return true;
+      }
     }
     return false;
+  });
+}
+
+const platformOrder = ["common", "linux", "osx", "windows"];
+
+function sortPages(pages: Page[]): Page[] {
+  return pages.sort((pageA, pageB) => {
+    // sort by language
+    const languageA = pageA.language;
+    const languageB = pageB.language;
+    const compareLanguage = languageA.localeCompare(languageB);
+    if (compareLanguage !== 0) return compareLanguage;
+
+    // sort by platform
+    const platformA = pageA.platform;
+    const platformB = pageB.platform;
+    const indexA = platformOrder.indexOf(platformA);
+    const indexB = platformOrder.indexOf(platformB);
+    if (indexA !== -1 && indexB !== -1) {
+      return indexA - indexB;
+    }
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+
+    const comparePlatform = platformA.localeCompare(platformB);
+    if (comparePlatform !== 0) return comparePlatform;
+
+    return 0;
   });
 }
