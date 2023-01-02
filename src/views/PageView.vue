@@ -28,7 +28,7 @@ const page = computedAsync<Page | undefined | null>(
 const markdown = computedAsync<string | undefined | null>(
   async () => {
     if (page.value) {
-      const text = await page.value.getText();
+      const text = await page.value.text();
       console.debug(text);
       return text;
     } else {
