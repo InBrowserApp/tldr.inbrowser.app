@@ -9,12 +9,13 @@
 import PageSearchConfig from "./PageSearchConfig.vue";
 import { useStorage } from "@vueuse/core";
 import PageSearchAutoComplete from "./PageSearchAutoComplete.vue";
+import { getDefaultPlatforms } from "./getDefaultPlatforms";
 
 const config = useStorage(
   "tldr.inbrowser.app:search:config",
   {
     languages: [""],
-    platforms: ["common"],
+    platforms: getDefaultPlatforms(),
   },
   undefined,
   { mergeDefaults: true }
