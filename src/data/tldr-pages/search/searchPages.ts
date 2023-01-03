@@ -12,21 +12,22 @@ export async function searchPages(
 ): Promise<Page[]> {
   const query = query_.trim().replace(" ", "-");
   const pages = await getPages();
+  const queryLower = query.toLowerCase();
 
   const exactResult = pages.filter((page) => {
-    return page.basename.toLowerCase() === query.toLowerCase();
+    return page.basenameLower === queryLower;
   });
 
   const sortedExactResult = sortPages(exactResult);
 
   const prefixResult = pages.filter((page) => {
-    return page.basename.toLowerCase().startsWith(query.toLowerCase());
+    return page.basenameLower.startsWith(queryLower);
   });
 
   const sortedPrefixResult = sortPages(prefixResult);
 
   const anyResult = pages.filter((page) => {
-    return page.basename.toLowerCase().includes(query.toLowerCase());
+    return page.basenameLower.includes(queryLower);
   });
 
   const sortedAnyResult = sortPages(anyResult);
