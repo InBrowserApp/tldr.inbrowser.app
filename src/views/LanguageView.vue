@@ -4,7 +4,11 @@
       <LanguageIcon style="margin-right: 0.5em; vertical-align: -0.2em" />
       <span style="margin-right: 0.5em">{{ languageDisplayName }}</span>
     </n-h1>
-    <PlatformInfos :platformCounter="platformCounter" v-if="platformCounter" />
+    <PlatformInfos
+      :platformCounter="platformCounter"
+      :language="language"
+      v-if="platformCounter"
+    />
   </main>
 </template>
 
@@ -16,7 +20,6 @@ import { useRoute } from "vue-router";
 import { useLanguagePlatforms } from "@/data/tldr-pages/composables/useLanguagePlatforms";
 import LanguageIcon from "@/components/misc/LanguageIcon.vue";
 import PlatformInfos from "@/components/language/PlatformInfos.vue";
-
 
 const { language, languageDisplayName } = useLanguage();
 const { platformCounter } = useLanguagePlatforms(language);
