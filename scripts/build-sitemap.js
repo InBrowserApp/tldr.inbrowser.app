@@ -14,6 +14,7 @@ const sitemapFooter = `</urlset>`;
 const urls = Object.keys(zip.files)
   .filter((path) => path.endsWith(".md"))
   .map((path) => path.slice("tldr-main/".length, -".md".length)) //remove prefix tldr-main/ and '.md'
+  .filter((path) => path.startsWith("pages")) //only pages
   .map((part) => `https://tldr.inbrowser.app/${part}`); //add prefix https://tldr.inbrowser.app/
 
 console.log(`Sitemap page urls count: ${urls.length}`);
