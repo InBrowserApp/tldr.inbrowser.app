@@ -2,14 +2,14 @@
   <n-tag :bordered="false" :size="size">
     {{ language }}
     <template #icon>
-      <n-icon :component="Language" />
+      <LanguageIcon />
     </template>
   </n-tag>
 </template>
 
 <script lang="ts" setup>
-import { NTag, NIcon } from "naive-ui";
-import Language from "@vicons/ionicons5/Language";
+import { NTag } from "naive-ui";
+import LanguageIcon from "@/components/misc/LanguageIcon.vue";
 
 defineProps<{
   language: string;

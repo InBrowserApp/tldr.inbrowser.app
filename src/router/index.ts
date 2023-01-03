@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import PageView from "../views/PageView.vue";
 import PlatformView from "../views/PlatformView.vue";
+import LanguageView from "../views/LanguageView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,7 +12,14 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
-    // Page View
+    // Language View
+    // pattern: /pages
+    {
+      path: "/pages:language(.*)",
+      name: "language",
+      component: LanguageView,
+    },
+    // Platform View
     // pattern: /pages/common
     {
       path: "/pages:language(.*)/:platform(.*)",

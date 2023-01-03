@@ -9,7 +9,16 @@ export function useLanguage() {
   });
   const language = computed(() => languagePathPart.value.replace(".", ""));
 
+  const languageDisplayName = computed(() => {
+    if (language.value === "") {
+      return "en";
+    } else {
+      return language.value;
+    }
+  });
+
   return {
     language,
+    languageDisplayName,
   };
 }
