@@ -66,4 +66,9 @@ const renderLabel = (option: SelectOption) => {
 .page-search-auto-complete-menu .n-base-select-option__content {
   width: 100%;
 }
+
+.page-search-auto-complete-menu.n-base-select-menu
+  .n-base-select-option.n-base-select-option--show-checkmark {
+  padding-right: calc(var(--n-option-padding-right) + 3px);
+}
 </style>
