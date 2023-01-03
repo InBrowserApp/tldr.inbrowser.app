@@ -11,4 +11,22 @@
 import { NH2 } from "naive-ui";
 import PageSearch from "@/components/search/PageSearch.vue";
 import DataStatistics from "@/components/misc/DataStatistics.vue";
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "tldr InBrowser.App",
+  meta: [
+    {
+      name: "description",
+      content:
+        "tldr InBrowser.App is a web client for tldr-pages. Fully runs in your browser, no data is sent to the server. Fast and offline capable.",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: `https://tldr.inbrowser.app/`,
+    },
+  ],
+});
 </script>
