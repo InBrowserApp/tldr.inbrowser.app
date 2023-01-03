@@ -1,5 +1,5 @@
 import type { Entry } from "@zip.js/zip.js";
-import { TextWriter } from "@zip.js/zip.js";
+import { getText } from "../zip";
 
 export class Page {
   private readonly entry: Entry;
@@ -15,10 +15,7 @@ export class Page {
   async text(): Promise<string> {
     if (this.textPromise) return this.textPromise;
 
-    this.textPromise = (async () => {
-      const text = await this.entry.getData(new TextWriter());
-      return text;
-    })();
+    this.textPromise = getText(this.entry);
 
     return this.textPromise;
   }
