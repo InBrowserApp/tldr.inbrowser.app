@@ -26,6 +26,7 @@ usePageViewMetadata(page);
         />
         <PagePlatform
           :platform="page.platform"
+          :language="page.language"
           v-if="page.platform && page.platform !== 'common'"
         />
       </n-space>

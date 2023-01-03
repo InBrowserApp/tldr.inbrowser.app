@@ -10,6 +10,7 @@
       <PagePlatform
         v-if="page.platform !== 'common'"
         :platform="page.platform"
+        :language="page.language"
         size="small"
       />
     </n-space>

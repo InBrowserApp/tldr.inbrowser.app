@@ -1,25 +1,19 @@
-import { useRouter } from "vue-router";
 import { computed } from "vue";
 import type { Ref } from "vue";
 import { get } from "@vueuse/core";
+import { useLanguageURL } from "./useLanguageURL";
 
 export function usePlatformURL(
   language: Ref<string> | string,
   platform: Ref<string> | string
 ) {
-  const router = useRouter();
+  const { url: languageURL } = useLanguageURL(language);
 
   const url = computed(() => {
-    const languagePart = get(language) === "" ? "" : `.${get(language)}`;
-    return `/pages${languagePart}/${get(platform)}`;
+    return `${languageURL.value}/${get(platform)}`;
   });
-
-  const push = () => {
-    router.push(url.value);
-  };
 
   return {
     url,
-    push,
   };
 }
