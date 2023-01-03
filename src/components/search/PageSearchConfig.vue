@@ -1,7 +1,7 @@
 <template>
   <n-popover trigger="hover">
     <template #trigger>
-      <n-button quaternary circle>
+      <n-button quaternary circle aria-label="Search Configs">
         <template #icon>
           <n-icon :component="Settings20Filled" />
         </template>
