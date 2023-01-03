@@ -1,20 +1,22 @@
 <template>
-  <n-space justify="space-between" style="width: 100%">
-    <span>{{ command }}</span>
-    <n-space>
-      <LanguageTag
-        v-if="page.language !== ''"
-        :language="page.language"
-        size="small"
-      />
-      <PlatformTag
-        v-if="page.platform !== 'common'"
-        :platform="page.platform"
-        :language="page.language"
-        size="small"
-      />
+  <a :href="page.path" @click.prevent class="search-entry-a">
+    <n-space justify="space-between" style="width: 100%">
+      <span>{{ command }}</span>
+      <n-space>
+        <LanguageTag
+          v-if="page.language !== ''"
+          :language="page.language"
+          size="small"
+        />
+        <PlatformTag
+          v-if="page.platform !== 'common'"
+          :platform="page.platform"
+          :language="page.language"
+          size="small"
+        />
+      </n-space>
     </n-space>
-  </n-space>
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -31,3 +33,14 @@ const props = defineProps<{
 
 const { command } = usePageCommand(toRef(props, "page"));
 </script>
+
+<style scoped>
+.search-entry-a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-entry-a:hover {
+  text-decoration: none;
+}
+</style>
