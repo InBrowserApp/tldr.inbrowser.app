@@ -7,7 +7,7 @@
       autocorrect: 'off',
     }"
     :options="options"
-    placeholder="tar"
+    :placeholder="placeholder"
     :render-label="renderLabel"
     :get-show="() => true"
     :menu-props="{
@@ -27,6 +27,9 @@ import { computedAsync } from "@vueuse/core";
 import PageSearchResultEntry from "./PageSearchResultEntry.vue";
 import type { Page } from "@/data/tldr-pages/page";
 import { useRouter } from "vue-router";
+import { useRandomPlaceholder } from "./useRandomPlaceholder";
+
+const { placeholder } = useRandomPlaceholder();
 
 const props = defineProps<{
   config: {
