@@ -38,6 +38,8 @@ import { NSelect, NPopover, NButton, NFormItem, NIcon } from "naive-ui";
 import Language from "@vicons/ionicons5/Language";
 import Desktop16Regular from "@vicons/fluent/Desktop16Regular";
 import Settings20Filled from "@vicons/fluent/Settings20Filled";
+import { getLanguageDisplay } from "@/data/tldr-pages/display";
+import { getPlatformDisplay } from "@/data/tldr-pages/display";
 
 const props = defineProps<{
   config: {
@@ -61,7 +63,7 @@ const config = computed({
 const languageOptions = computedAsync(async () => {
   return [...(await getLanguages())].map((language) => {
     return {
-      label: language === "" ? "en" : language,
+      label: getLanguageDisplay(language),
       value: language,
     };
   });
@@ -75,7 +77,7 @@ const languageOptions = computedAsync(async () => {
 const platformOptions = computedAsync(async () => {
   return [...(await getPlatforms())].map((platform) => {
     return {
-      label: platform,
+      label: getPlatformDisplay(platform),
       value: platform,
     };
   });

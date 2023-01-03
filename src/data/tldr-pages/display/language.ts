@@ -1,41 +1,25 @@
-const displayMap = {
-  ar: "ar",
-  bn: "bn",
-  bs: "bs",
-  ca: "ca",
-  da: "da",
-  de: "de",
-  es: "es",
-  fa: "fa",
-  fr: "fr",
-  hi: "hi",
-  id: "id",
-  it: "it",
-  ja: "ja",
-  ko: "ko",
-  lo: "lo",
-  ml: "ml",
-  ne: "ne",
-  nl: "nl",
-  no: "no",
-  pl: "pl",
-  pt_BR: "pt_BR",
-  pt_PT: "pt_PT",
-  ro: "ro",
-  ru: "ru",
-  sh: "sh",
-  sr: "sr",
-  sv: "sv",
-  ta: "ta",
-  th: "th",
-  tr: "tr",
-  uk: "uk",
-  uz: "uz",
-  zh: "zh",
-  zh_TW: "zh_TW",
-  "": "English",
+import langmap from "langmap";
+
+const additonalDisplayMap = {
+  bs: langmap["bs-BA"].nativeName,
+  lo: "ພາສາລາວ",
+  sh: "Српскохрватски јазик",
 } as Record<string, string>;
 
-export function getLanguageDisplay(language: string) {
-  return displayMap?.[language] || language;
+export function getLanguageDisplay(language: string): string {
+  if (language === "") {
+    return langmap["en"]["nativeName"];
+  }
+
+  // find in langmap
+  // replace _ with -
+  const languageWithDash = language.replace("_", "-");
+  // get the language name from langmap
+  const languageName = langmap?.[languageWithDash]?.nativeName;
+
+  if (languageName) {
+    return languageName;
+  }
+
+  return additonalDisplayMap?.[language] || language;
 }
