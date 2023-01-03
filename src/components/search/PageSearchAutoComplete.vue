@@ -45,6 +45,7 @@ const searchResults = computedAsync(async () => {
   const languages = props.config.languages;
   const platforms = props.config.platforms;
   const results = await searchPages(query.value, {
+    size: 20,
     languages,
     platforms,
   });
