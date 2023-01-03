@@ -12,7 +12,8 @@ import { usePageViewMetadata } from "./usePageViewMetadata";
 const route = useRoute();
 
 const { page, markdown } = usePage(toRef(route, "path"));
-usePageViewMetadata(toRef(route, "path"), page);
+
+usePageViewMetadata(page);
 </script>
 
 <template>

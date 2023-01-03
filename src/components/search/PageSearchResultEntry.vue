@@ -17,17 +17,16 @@
 </template>
 
 <script setup lang="ts">
+import { toRef } from "vue";
 import type { Page } from "@/data/tldr-pages/page";
 import PageLanguage from "@/components/page/PageLanguage.vue";
 import PagePlatform from "@/components/page/PagePlatform.vue";
 import { NSpace } from "naive-ui";
-import { computedAsync } from "@vueuse/core";
+import { usePageCommand } from "@/data/tldr-pages/composables/usePageCommand";
 
 const props = defineProps<{
   page: Page;
 }>();
 
-const command = computedAsync(async () => {
-  return await props.page.command;
-}, props.page.basename);
+const { command } = usePageCommand(toRef(props, "page"));
 </script>
