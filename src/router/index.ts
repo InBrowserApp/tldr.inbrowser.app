@@ -10,8 +10,10 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
+    // Page View
+    // pattern: /pages/
     {
-      path: "/:pathMatch(.*)*",
+      path: "/pages:lang(.*)/:platform(.*)/:page(.*)",
       name: "page",
       component: PageView,
     },
