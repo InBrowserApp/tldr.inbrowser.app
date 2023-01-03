@@ -6,7 +6,7 @@
 
       <PageSearch
         id="header-search"
-        v-show="showSearch"
+        v-if="showSearch"
         style="margin-bottom: 1em"
       />
     </div>

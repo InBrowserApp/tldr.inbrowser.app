@@ -15,11 +15,12 @@
     }"
     @select="router.push"
     clear-after-select
+    ref="searchInput"
   />
 </template>
 
 <script setup lang="ts">
-import { ref, computed, h } from "vue";
+import { ref, computed, h, onMounted, nextTick } from "vue";
 import { NAutoComplete, type SelectOption } from "naive-ui";
 import { searchPages } from "@/data/tldr-pages/search";
 import { computedAsync } from "@vueuse/core";
@@ -34,9 +35,13 @@ const props = defineProps<{
   };
 }>();
 
+const searchInput = ref<InstanceType<typeof NAutoComplete> | null>(null);
 const router = useRouter();
 const query = ref("");
 const searchResults = computedAsync(async () => {
+  if (query.value === "") {
+    return [];
+  }
   const languages = props.config.languages;
   const platforms = props.config.platforms;
   const results = await searchPages(query.value, {
@@ -62,6 +67,13 @@ const renderLabel = (option: SelectOption) => {
     page: option.page as Page,
   });
 };
+
+// auto-focus
+onMounted(() => {
+  nextTick(() => {
+    searchInput.value?.focus();
+  });
+});
 </script>
 
 <style>
