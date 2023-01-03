@@ -1,4 +1,5 @@
 import { Page, getPages } from "../page";
+import { filterByLanguageAndPlatform } from "./filter-language-platform";
 
 export interface SearchOptions {
   size?: number;
@@ -10,10 +11,20 @@ export async function searchPages(
   query_: string,
   options?: SearchOptions
 ): Promise<Page[]> {
+  // normalize query
   const query = query_.trim().replace(" ", "-");
-  const pages = await getPages();
   const queryLower = query.toLowerCase();
 
+  // get all pages
+  const rawPages = await getPages();
+  // filter by language and platform
+  const pages = filterByLanguageAndPlatform(
+    rawPages,
+    options?.languages ?? [""],
+    options?.platforms ?? ["common"]
+  );
+
+  // search with exact match, prefix match and any match
   const exactResult = pages.filter((page) => {
     return page.basenameLower === queryLower;
   });
@@ -32,6 +43,7 @@ export async function searchPages(
 
   const sortedAnyResult = sortPages(anyResult);
 
+  // merge results
   let result = [
     ...new Set([
       ...sortedExactResult,
@@ -40,45 +52,10 @@ export async function searchPages(
     ]),
   ];
 
-  // filter by language
-  if (options?.languages) {
-    result = filterByLanguage(result, options.languages);
-  }
-
-  if (options?.platforms) {
-    result = filterByPlatform(result, options.platforms);
-  }
-
   // limit entries size
   result = result.slice(0, options?.size ?? 20);
 
   return result;
-}
-
-// filter by language
-// for example: ["", "de"]
-function filterByLanguage(pages: Page[], languages: string[]): Page[] {
-  return pages.filter((page) => {
-    for (const language of languages) {
-      if (language === page.language) {
-        return true;
-      }
-    }
-    return false;
-  });
-}
-
-// filter by platform
-// for example: ["common", "linux"]
-function filterByPlatform(pages: Page[], platforms: string[]): Page[] {
-  return pages.filter((page) => {
-    for (const platform of platforms) {
-      if (platform === page.platform) {
-        return true;
-      }
-    }
-    return false;
-  });
 }
 
 const platformOrder = ["common", "linux", "osx", "windows"];
