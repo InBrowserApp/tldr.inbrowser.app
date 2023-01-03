@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://tldr.inbrowser.app/pages-sitemap.xml
