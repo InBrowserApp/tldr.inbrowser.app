@@ -1,2 +1,5 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+/tldr-pages.zip
+  Content-Type: text/plain
