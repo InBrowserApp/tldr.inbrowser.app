@@ -1,5 +1,5 @@
 <template>
-  <n-result status="404" title="404 Not Found">
+  <n-result status="404" title="404 Not Found" style="margin-top: 4em">
     <template #footer>
       <router-link :to="location.path">
         <n-text code style="font-size: 2em">{{ location.basename }}</n-text>

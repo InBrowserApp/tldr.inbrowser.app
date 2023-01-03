@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import PageView from "../views/PageView.vue";
 import PlatformView from "../views/PlatformView.vue";
 import LanguageView from "../views/LanguageView.vue";
+import NotFoundView from "../views/NotFoundView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,12 @@ const router = createRouter({
       path: "/pages:language(.*)/:platform(.*)/:page(.*)",
       name: "page",
       component: PageView,
+    },
+    // Any other route
+    {
+      path: "/:path(.*)*",
+      name: "not-found",
+      component: NotFoundView,
     },
   ],
 });
