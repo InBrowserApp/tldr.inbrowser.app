@@ -13,6 +13,7 @@
         class: 'page-search-auto-complete-menu',
       }"
       @select="router.push"
+      clear-after-select
     />
     <PageSearchConfig v-model:config="config" />
   </div>
