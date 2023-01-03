@@ -27,6 +27,11 @@ export function useLanguagePlatforms(language: Ref<string> | string) {
         }
 
         loadingBar.finish();
+
+        if (platformCounter.size === 0) {
+          return null;
+        }
+
         return platformCounter;
       } catch (error) {
         loadingBar.error();

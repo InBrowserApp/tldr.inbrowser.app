@@ -19,6 +19,10 @@ export function usePlatformPages(
           page.platform === get(platform) && page.language === get(language)
       );
       loadingBar.finish();
+      if (filteredPages.length === 0) {
+        return null;
+      }
+
       return filteredPages;
     } catch (error) {
       loadingBar.error();

@@ -9,6 +9,7 @@ import PagePlatform from "@/components/page/PagePlatform.vue";
 import { usePage } from "@/data/tldr-pages/composables/usePage";
 import { usePageViewMetadata } from "./usePageViewMetadata";
 import { languageTag } from "@/data/tldr-pages/misc/languageTag";
+import NotFound from "@/components/misc/NotFound.vue";
 
 const route = useRoute();
 
@@ -37,6 +38,9 @@ usePageViewMetadata(page);
 
       <n-divider />
       <FindOnGitHub :href="page.githubURL" />
+    </template>
+    <template v-if="page === null">
+      <NotFound />
     </template>
   </main>
 </template>

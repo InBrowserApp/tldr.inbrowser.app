@@ -1,14 +1,19 @@
 <template>
   <main>
-    <n-h1 prefix="bar" align-text>
-      <LanguageIcon style="margin-right: 0.5em; vertical-align: -0.2em" />
-      <span style="margin-right: 0.5em">{{ languageDisplay }}</span>
-    </n-h1>
-    <PlatformInfos
-      :platformCounter="platformCounter"
-      :language="language"
-      v-if="platformCounter"
-    />
+    <template v-if="platformCounter !== null">
+      <n-h1 prefix="bar" align-text>
+        <LanguageIcon style="margin-right: 0.5em; vertical-align: -0.2em" />
+        <span style="margin-right: 0.5em">{{ languageDisplay }}</span>
+      </n-h1>
+    </template>
+
+    <template v-if="platformCounter">
+      <PlatformInfos :platformCounter="platformCounter" :language="language" />
+    </template>
+
+    <template v-if="platformCounter === null">
+      <NotFound />
+    </template>
   </main>
 </template>
 
@@ -21,6 +26,7 @@ import { useLanguagePlatforms } from "@/data/tldr-pages/composables/useLanguageP
 import LanguageIcon from "@/components/misc/LanguageIcon.vue";
 import PlatformInfos from "@/components/language/PlatformInfos.vue";
 import { useLanguageDisplay } from "@/data/tldr-pages/composables/useLanguageDisplay";
+import NotFound from "@/components/misc/NotFound.vue";
 
 const { language } = useLanguage();
 const { languageDisplay } = useLanguageDisplay(language);

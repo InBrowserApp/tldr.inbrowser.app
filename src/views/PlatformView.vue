@@ -1,11 +1,21 @@
 <template>
   <main>
-    <n-h1 prefix="bar" align-text>
-      <span style="margin-right: 0.5em">{{ platformDisplay }}</span>
-      <PageLanguage :language="language" v-if="language !== ''" />
-    </n-h1>
-    <PageInfos :pages="pages" v-if="pages" />
-    <PageInfosSkeleton :repeat="5" v-else />
+    <template v-if="pages || pages === undefined">
+      <n-h1 prefix="bar" align-text>
+        <span style="margin-right: 0.5em">{{ platformDisplay }}</span>
+        <PageLanguage :language="language" v-if="language !== ''" />
+      </n-h1>
+    </template>
+    <template v-if="pages">
+      <PageInfos :pages="pages" />
+    </template>
+    <template v-if="pages === undefined">
+      <PageInfosSkeleton :repeat="5" />
+    </template>
+
+    <template v-if="pages === null">
+      <NotFound />
+    </template>
   </main>
 </template>
 
@@ -21,6 +31,7 @@ import { useHead } from "@vueuse/head";
 import { useRoute } from "vue-router";
 import { usePlatformDisplay } from "@/data/tldr-pages/composables/usePlatformDisplay";
 import { useLanguageDisplay } from "@/data/tldr-pages/composables/useLanguageDisplay";
+import NotFound from "@/components/misc/NotFound.vue";
 
 const { language } = useLanguage();
 const { platform } = usePlatform();
