@@ -2,7 +2,7 @@
   <main>
     <n-h1 prefix="bar" align-text>
       <LanguageIcon style="margin-right: 0.5em; vertical-align: -0.2em" />
-      <span style="margin-right: 0.5em">{{ languageDisplayName }}</span>
+      <span style="margin-right: 0.5em">{{ languageDisplay }}</span>
     </n-h1>
     <PlatformInfos
       :platformCounter="platformCounter"
@@ -20,18 +20,20 @@ import { useRoute } from "vue-router";
 import { useLanguagePlatforms } from "@/data/tldr-pages/composables/useLanguagePlatforms";
 import LanguageIcon from "@/components/misc/LanguageIcon.vue";
 import PlatformInfos from "@/components/language/PlatformInfos.vue";
+import { useLanguageDisplay } from "@/data/tldr-pages/composables/useLanguageDisplay";
 
-const { language, languageDisplayName } = useLanguage();
+const { language } = useLanguage();
+const { languageDisplay } = useLanguageDisplay(language);
 const { platformCounter } = useLanguagePlatforms(language);
 
 const route = useRoute();
 
 useHead({
-  title: `${languageDisplayName.value} | tldr InBrowser.App`,
+  title: `Commands in ${languageDisplay.value} | tldr InBrowser.App`,
   meta: [
     {
       name: "description",
-      content: `tldr commands list in language ${languageDisplayName.value}.`,
+      content: `tldr commands list in language ${languageDisplay.value}.`,
     },
   ],
   link: [

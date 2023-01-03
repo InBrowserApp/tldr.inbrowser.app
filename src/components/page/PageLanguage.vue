@@ -1,6 +1,6 @@
 <template>
   <n-tag :bordered="false" :size="size">
-    {{ language }}
+    {{ languageDisplay }}
     <template #icon>
       <LanguageIcon />
     </template>
@@ -8,11 +8,17 @@
 </template>
 
 <script lang="ts" setup>
+import { toRef } from "vue";
 import { NTag } from "naive-ui";
 import LanguageIcon from "@/components/misc/LanguageIcon.vue";
+import { useLanguageDisplay } from "@/data/tldr-pages/composables/useLanguageDisplay";
 
-defineProps<{
+const props = defineProps<{
   language: string;
   size?: "small" | "medium" | "large";
 }>();
+
+const language = toRef(props, "language");
+
+const { languageDisplay } = useLanguageDisplay(language);
 </script>

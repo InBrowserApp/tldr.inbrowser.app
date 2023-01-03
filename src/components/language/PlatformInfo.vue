@@ -3,7 +3,7 @@
     <n-statistic>
       <template #label>
         <PlatformIcon :platform="info.platform" style="margin-right: 0.5em" />{{
-          info.platform
+          platformDisplay
         }}
       </template>
       {{ info.count }}
@@ -16,6 +16,7 @@ import { NStatistic } from "naive-ui";
 import PlatformIcon from "@/components/misc/PlatformIcon.vue";
 import { usePlatformURL } from "@/router/composables/usePlatformURL";
 import { toRefs } from "@vueuse/core";
+import { usePlatformDisplay } from "@/data/tldr-pages/composables/usePlatformDisplay";
 
 const props = defineProps<{
   info: {
@@ -27,6 +28,7 @@ const props = defineProps<{
 
 const { language, info } = toRefs(props);
 const { platform } = toRefs(info);
+const { platformDisplay } = usePlatformDisplay(platform);
 
 const { url } = usePlatformURL(language, platform);
 </script>

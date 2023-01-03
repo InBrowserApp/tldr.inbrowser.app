@@ -1,7 +1,7 @@
 <template>
   <main>
     <n-h1 prefix="bar" align-text>
-      <span style="margin-right: 0.5em">{{ platform }}</span>
+      <span style="margin-right: 0.5em">{{ platformDisplay }}</span>
       <PageLanguage :language="language" v-if="language !== ''" />
     </n-h1>
     <PageInfos :pages="pages" v-if="pages" />
@@ -19,22 +19,27 @@ import PageInfos from "@/components/platform/PageInfos.vue";
 import PageInfosSkeleton from "@/components/platform/PageInfosSkeleton.vue";
 import { useHead } from "@vueuse/head";
 import { useRoute } from "vue-router";
+import { usePlatformDisplay } from "@/data/tldr-pages/composables/usePlatformDisplay";
+import { useLanguageDisplay } from "@/data/tldr-pages/composables/useLanguageDisplay";
 
 const { language } = useLanguage();
 const { platform } = usePlatform();
 const { pages } = usePlatformPages(language, platform);
 
+const { platformDisplay } = usePlatformDisplay(platform);
+const { languageDisplay } = useLanguageDisplay(language);
+
 const route = useRoute();
 
 useHead({
-  title: `${platform.value}${
-    language.value !== "" ? ` ${language.value}` : ""
+  title: `${platformDisplay.value} commands${
+    language.value !== "" ? ` in ${languageDisplay.value}` : ""
   } | tldr InBrowser.App`,
   meta: [
     {
       name: "description",
-      content: `tldr commands list for platform ${platform.value}${
-        language.value !== "" ? ` in language ${language.value}` : ""
+      content: `tldr commands list for platform ${platformDisplay.value}${
+        language.value !== "" ? ` in language ${languageDisplay.value}` : ""
       }.`,
     },
   ],
