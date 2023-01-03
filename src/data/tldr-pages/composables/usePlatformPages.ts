@@ -18,6 +18,7 @@ export function usePlatformPages(
         (page) =>
           page.platform === get(platform) && page.language === get(language)
       );
+      loadingBar.finish();
       return filteredPages;
     } catch (error) {
       loadingBar.error();
