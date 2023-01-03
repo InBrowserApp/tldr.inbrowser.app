@@ -1,7 +1,9 @@
 <template>
   <main>
-    <PageLanguage :language="language" v-if="language !== ''" />
-    <n-h1 prefix="bar" align-text>{{ platform }}</n-h1>
+    <n-h1 prefix="bar" align-text>
+      <span style="margin-right: 0.5em">{{ platform }}</span>
+      <PageLanguage :language="language" v-if="language !== ''" />
+    </n-h1>
     <PageInfos :pages="pages" v-if="pages" />
   </main>
 </template>

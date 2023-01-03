@@ -1,9 +1,16 @@
 <template>
   <n-p>
-    <span v-if="descriptionWithoutMoreInfo">
+    <n-ellipsis :line-clamp="1" v-if="descriptionWithoutMoreInfo">
       {{ descriptionWithoutMoreInfo }}
-    </span>
-    <n-skeleton v-else />
+    </n-ellipsis>
+    <n-skeleton
+      style="
+        height: calc(var(--n-line-height) * var(--n-font-size));
+        vertical-align: 0;
+      "
+      text
+      v-else
+    />
   </n-p>
 </template>
 
@@ -11,7 +18,7 @@
 import { toRef, computed } from "vue";
 import type { Page } from "@/data/tldr-pages/page";
 import { usePageDescription } from "@/data/tldr-pages/composables/usePageDescription";
-import { NP, NSkeleton } from "naive-ui";
+import { NP, NSkeleton, NEllipsis } from "naive-ui";
 
 const props = defineProps<{
   page: Page;
