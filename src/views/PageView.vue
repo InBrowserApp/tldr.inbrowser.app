@@ -17,18 +17,20 @@ usePageViewMetadata(toRef(route, "path"), page);
 
 <template>
   <main>
-    <n-space>
-      <PageLanguage
-        :language="page?.language"
-        v-if="page?.language && page.language !== ''"
-      />
-      <PagePlatform
-        :platform="page.platform"
-        v-if="page?.platform && page?.platform !== 'common'"
-      />
-    </n-space>
-    <PageMarkdown :markdown="markdown" v-if="markdown" />
-    <n-divider />
-    <FindOnGitHub :href="page.githubURL" v-if="page" />
+    <template v-if="page && markdown">
+      <n-space>
+        <PageLanguage
+          :language="page.language"
+          v-if="page.language && page.language !== ''"
+        />
+        <PagePlatform
+          :platform="page.platform"
+          v-if="page.platform && page.platform !== 'common'"
+        />
+      </n-space>
+      <PageMarkdown :markdown="markdown" />
+      <n-divider />
+      <FindOnGitHub :href="page.githubURL" />
+    </template>
   </main>
 </template>

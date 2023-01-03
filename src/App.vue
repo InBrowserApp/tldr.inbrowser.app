@@ -1,12 +1,12 @@
 <template>
   <n-config-provider :theme="theme">
     <n-global-style />
-    <n-message-provider>
+    <n-loading-bar-provider>
       <div class="app">
         <TheHeader />
         <RouterView />
       </div>
-    </n-message-provider>
+    </n-loading-bar-provider>
   </n-config-provider>
 </template>
 
@@ -16,7 +16,7 @@ import {
   darkTheme,
   NConfigProvider,
   NGlobalStyle,
-  NMessageProvider,
+  NLoadingBarProvider,
 } from "naive-ui";
 import { RouterView } from "vue-router";
 import { computed } from "vue";
