@@ -28,6 +28,7 @@ const html = computed(() => marked.parse(props.markdown));
       text-decoration-color 0.3s var(--n-bezier);
     text-decoration-color: var(--n-text-color);
     color: var(--n-text-color);
+    word-wrap: break-word;
   }
 
   blockquote {
