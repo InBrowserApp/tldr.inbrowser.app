@@ -7,6 +7,7 @@
       style="
         height: calc(var(--n-line-height) * var(--n-font-size));
         vertical-align: 0;
+        max-width: 20em;
       "
       text
       v-else
