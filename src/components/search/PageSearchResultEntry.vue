@@ -2,12 +2,12 @@
   <n-space justify="space-between" style="width: 100%">
     <span>{{ command }}</span>
     <n-space>
-      <PageLanguage
+      <LanguageTag
         v-if="page.language !== ''"
         :language="page.language"
         size="small"
       />
-      <PagePlatform
+      <PlatformTag
         v-if="page.platform !== 'common'"
         :platform="page.platform"
         :language="page.language"
@@ -20,8 +20,8 @@
 <script setup lang="ts">
 import { toRef } from "vue";
 import type { Page } from "@/data/tldr-pages/page";
-import PageLanguage from "@/components/page/PageLanguage.vue";
-import PagePlatform from "@/components/page/PagePlatform.vue";
+import LanguageTag from "@/components/misc/LanguageTag.vue";
+import PlatformTag from "@/components/misc/PlatformTag.vue";
 import { NSpace } from "naive-ui";
 import { usePageCommand } from "@/data/tldr-pages/composables/usePageCommand";
 
