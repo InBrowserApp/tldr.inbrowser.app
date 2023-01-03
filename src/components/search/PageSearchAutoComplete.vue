@@ -3,6 +3,8 @@
     v-model:value="query"
     :input-props="{
       autocomplete: 'disabled',
+      spellcheck: 'false',
+      autocorrect: 'off',
     }"
     :options="options"
     placeholder="tar"
