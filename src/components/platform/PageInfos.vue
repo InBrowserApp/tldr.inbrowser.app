@@ -2,7 +2,11 @@
   <div>
     <PageInfo v-for="page in pages" :key="page.path" :page="page" />
     <n-space justify="center">
-      <n-pagination v-model:page="pageNum" :page-count="pageCount" />
+      <n-pagination
+        v-model:page="pageNum"
+        :page-count="pageCount"
+        :page-slot="7"
+      />
     </n-space>
   </div>
 </template>
