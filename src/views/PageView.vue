@@ -8,6 +8,7 @@ import PageLanguage from "@/components/page/PageLanguage.vue";
 import PagePlatform from "@/components/page/PagePlatform.vue";
 import { usePage } from "@/data/tldr-pages/composables/usePage";
 import { usePageViewMetadata } from "./usePageViewMetadata";
+import { languageTag } from "@/data/tldr-pages/misc/languageTag";
 
 const route = useRoute();
 
@@ -30,7 +31,10 @@ usePageViewMetadata(page);
           v-if="page.platform && page.platform !== 'common'"
         />
       </n-space>
-      <PageMarkdown :markdown="markdown" />
+      <div :lang="languageTag(page.language)">
+        <PageMarkdown :markdown="markdown" />
+      </div>
+
       <n-divider />
       <FindOnGitHub :href="page.githubURL" />
     </template>
