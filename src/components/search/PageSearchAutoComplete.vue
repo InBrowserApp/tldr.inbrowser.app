@@ -2,17 +2,16 @@
   <n-auto-complete
     v-model:value="query"
     :input-props="{
-      autocomplete: 'disabled',
-      spellcheck: 'false',
+      autocomplete: 'off',
       autocorrect: 'off',
+      autocapitalize: 'off',
+      spellcheck: 'false',
     }"
     :options="options"
     :placeholder="placeholder"
     :render-label="renderLabel"
     :get-show="() => true"
-    :menu-props="{
-      class: 'page-search-auto-complete-menu',
-    }"
+    :menu-props="{ class: 'page-search-auto-complete-menu' }"
     @select="router.push"
     clear-after-select
     ref="searchInput"
@@ -76,6 +75,12 @@ const renderLabel = (option: SelectOption) => {
 onMounted(() => {
   nextTick(() => {
     searchInput.value?.focus();
+
+    // FIXME: this is a hack to disable autocorrect on mobiles
+    searchInput.value?.inputInstRef?.inputElRef?.setAttribute(
+      "autocorrect",
+      "off"
+    );
   });
 });
 </script>
