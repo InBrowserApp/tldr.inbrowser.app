@@ -10,8 +10,8 @@
       </router-link>
     </n-h1>
     <n-h2 class="h2">
-      tldr InBrowser.App is a web client for tldr-pages. Fully runs in your
-      browser, no data is sent to the server. Fast and offline capable.
+      tldr InBrowser.App is a offline-capable PWA for tldr-pages. Fully runs in
+      your browser. Zero API latency.
     </n-h2>
   </div>
 </template>
