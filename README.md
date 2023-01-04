@@ -2,7 +2,7 @@
 
 https://tldr.inbrowser.app
 
-tldr InBrowser.App is a offline-capable PWA for [tldr-pages](https://github.com/tldr-pages/tldr). Fully runs in your browser. Zero API latency.
+tldr InBrowser.App is an offline-capable PWA for [tldr-pages](https://github.com/tldr-pages/tldr). Fully runs in your browser. Zero API latency.
 
 ## ✨ Features
 
@@ -10,9 +10,9 @@ tldr InBrowser.App is a offline-capable PWA for [tldr-pages](https://github.com/
 * Browse by platforms and languages.
 * Markdown render and dark mode support.
 * Everything is processed in your browser.
-* Works without network connection using PWA.
-* All files are static. No backend servers needed.
-* Zero API latency, no waiting for response.
+* Works without a network connection using PWA.
+* All files are static. No backend servers are needed.
+* Zero API latency, no waiting for a response.
 * Automatically updates when new tldr-pages are available.
 
 ## 🧑‍💻 Develop
