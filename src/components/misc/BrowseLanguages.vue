@@ -5,7 +5,7 @@
     scrollable
     @update:value="handleSelect"
   >
-    <n-button text>
+    <n-button text size="large">
       <template #icon>
         <LanguageIcon />
       </template>

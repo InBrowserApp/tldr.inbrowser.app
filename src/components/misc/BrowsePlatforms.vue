@@ -1,6 +1,6 @@
 <template>
   <n-dropdown trigger="hover" :options="options" @select="handleSelect">
-    <n-button text>
+    <n-button text size="large">
       <template #icon>
         <n-icon :component="Devices" />
       </template>
