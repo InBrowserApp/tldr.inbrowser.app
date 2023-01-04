@@ -29,5 +29,5 @@ const options = platforms.map((platform) => ({
 const handleSelect = (key: string) => {
   const url = `/pages/${key}`;
   router.push(url);
-}
+};
 </script>

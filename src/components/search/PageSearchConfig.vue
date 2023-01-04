@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { getLanguages, getPlatforms } from "@/data/tldr-pages/page";
+import { getPlatforms } from "@/data/tldr-pages/page";
 import { computedAsync } from "@vueuse/core";
 import { NSelect, NPopover, NButton, NFormItem, NIcon } from "naive-ui";
 import Language from "@vicons/ionicons5/Language";
@@ -40,6 +40,7 @@ import Desktop16Regular from "@vicons/fluent/Desktop16Regular";
 import Settings20Filled from "@vicons/fluent/Settings20Filled";
 import { getLanguageDisplay } from "@/data/tldr-pages/display";
 import { getPlatformDisplay } from "@/data/tldr-pages/display";
+import { useLanguages } from "@/data/tldr-pages/composables/useLanguages";
 
 const props = defineProps<{
   config: {
@@ -60,19 +61,13 @@ const config = computed({
   set: (config) => emit("update:config", config),
 });
 
-const languageOptions = computedAsync(async () => {
-  return [...(await getLanguages())].map((language) => {
-    return {
-      label: getLanguageDisplay(language),
-      value: language,
-    };
-  });
-}, [
-  {
-    label: "en",
-    value: "",
-  },
-]);
+const { languages } = useLanguages();
+const languageOptions = computed(() =>
+  languages.value.map((language) => ({
+    label: getLanguageDisplay(language),
+    value: language,
+  }))
+);
 
 const platformOptions = computedAsync(async () => {
   return [...(await getPlatforms())].map((platform) => {
@@ -83,7 +78,7 @@ const platformOptions = computedAsync(async () => {
   });
 }, [
   {
-    label: "common",
+    label: "Common",
     value: "common",
   },
 ]);
