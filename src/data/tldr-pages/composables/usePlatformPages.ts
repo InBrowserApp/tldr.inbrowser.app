@@ -1,6 +1,6 @@
 import type { Ref } from "vue";
 import { getPages, type Page } from "@/data/tldr-pages/page";
-
+import { nextTick } from "vue";
 import { computedAsync, get } from "@vueuse/core";
 import { useLoadingBar } from "naive-ui";
 
@@ -18,14 +18,14 @@ export function usePlatformPages(
         (page) =>
           page.platform === get(platform) && page.language === get(language)
       );
-      loadingBar.finish();
+      nextTick(loadingBar.finish);
       if (filteredPages.length === 0) {
         return null;
       }
 
       return filteredPages;
     } catch (error) {
-      loadingBar.error();
+      nextTick(loadingBar.error);
       return null;
     }
   }, undefined);

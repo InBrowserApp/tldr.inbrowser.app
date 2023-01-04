@@ -1,6 +1,6 @@
 import type { Ref } from "vue";
 import { getPage, type Page } from "@/data/tldr-pages/page";
-
+import { nextTick } from "vue";
 import { computedAsync, get } from "@vueuse/core";
 import { useLoadingBar } from "naive-ui";
 
@@ -13,7 +13,7 @@ export function usePage(path: Ref<string> | string) {
       const page = await getPage(get(path));
       return page;
     } catch (error) {
-      loadingBar.error();
+      nextTick(loadingBar.error);
       return null;
     }
   }, undefined);
@@ -21,7 +21,7 @@ export function usePage(path: Ref<string> | string) {
   const markdown = computedAsync<string | undefined | null>(async () => {
     if (page.value) {
       const text = await page.value.text();
-      loadingBar.finish();
+      nextTick(loadingBar.finish);
       return text;
     } else {
       return page.value;

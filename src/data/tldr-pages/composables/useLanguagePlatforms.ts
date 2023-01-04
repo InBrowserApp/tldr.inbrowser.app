@@ -1,6 +1,6 @@
 import type { Ref } from "vue";
 import { getPages } from "@/data/tldr-pages/page";
-
+import { nextTick } from "vue";
 import { computedAsync, get } from "@vueuse/core";
 import { useLoadingBar } from "naive-ui";
 
@@ -26,7 +26,7 @@ export function useLanguagePlatforms(language: Ref<string> | string) {
           }
         }
 
-        loadingBar.finish();
+        nextTick(loadingBar.finish);
 
         if (platformCounter.size === 0) {
           return null;
@@ -34,7 +34,7 @@ export function useLanguagePlatforms(language: Ref<string> | string) {
 
         return platformCounter;
       } catch (error) {
-        loadingBar.error();
+        nextTick(loadingBar.error);
         return null;
       }
     },
