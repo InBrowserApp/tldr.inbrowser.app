@@ -2,7 +2,7 @@
 import { toRef } from "vue";
 import { useRoute } from "vue-router";
 import { NDivider, NSpace } from "naive-ui";
-import PageMarkdown from "@/components/page/PageMarkdown.vue";
+import PageMarkdown from "@/components/page/PageMarkdown/PageMarkdown.vue";
 import FindOnGitHub from "@/components/page/FindOnGitHub.vue";
 import PageLanguage from "@/components/page/PageLanguage.vue";
 import PagePlatform from "@/components/page/PagePlatform.vue";
