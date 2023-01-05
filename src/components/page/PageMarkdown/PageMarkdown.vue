@@ -8,7 +8,7 @@
 import { computed } from "vue";
 import { marked } from "marked";
 import { NEl } from "naive-ui";
-import { handleHighlight } from "./TransformMarkdownHTML";
+import { handleHighlight } from "./HighlightMarkdownHTML";
 
 const props = defineProps<{
   markdown: string;
