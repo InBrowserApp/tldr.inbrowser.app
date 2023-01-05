@@ -8,15 +8,29 @@
 import { computed } from "vue";
 import { marked } from "marked";
 import { NEl } from "naive-ui";
+import { handlePlaceholder } from "./TransformMarkdownHTML";
 
 const props = defineProps<{
   markdown: string;
 }>();
 
-const html = computed(() => marked.parse(props.markdown));
+const html = computed(() => handlePlaceholder(marked.parse(props.markdown)));
 </script>
 
 <style lang="scss">
+.main-markdown {
+  .code-placeholder {
+    color: #d91e18;
+
+    // dark theme
+    @media (prefers-color-scheme:dark){
+      & {
+        color: #ffa07a;
+      }
+    }
+  }
+}
+
 .main-markdown {
   --n-bezier: var(--cubic-bezier-ease-in-out);
   --n-line-height: var(--line-height);
