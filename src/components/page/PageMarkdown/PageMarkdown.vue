@@ -8,13 +8,13 @@
 import { computed } from "vue";
 import { marked } from "marked";
 import { NEl } from "naive-ui";
-import { handlePlaceholder } from "./TransformMarkdownHTML";
+import { handleHighlight } from "./TransformMarkdownHTML";
 
 const props = defineProps<{
   markdown: string;
 }>();
 
-const html = computed(() => handlePlaceholder(marked.parse(props.markdown)));
+const html = computed(() => handleHighlight(marked.parse(props.markdown)));
 </script>
 
 <style lang="scss">
@@ -28,6 +28,14 @@ const html = computed(() => handlePlaceholder(marked.parse(props.markdown)));
         color: #ffa07a;
       }
     }
+  }
+
+  .mnemonics {
+    // TODO: use a better color or style?
+    // color: var(--primary-color);
+    // text-decoration: underline;
+    // font-size: 1.1em;
+    font-weight: bold;
   }
 }
 
