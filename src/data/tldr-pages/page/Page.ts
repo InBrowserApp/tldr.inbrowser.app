@@ -1,10 +1,25 @@
-import type { Entry } from "@zip.js/zip.js";
-import { getText } from "../zip";
+export interface Page {
+  readonly basename: string;
+  readonly platform: string;
+  readonly language: string;
+  readonly path: string;
+  readonly basenameLower: string;
 
-export class Page {
-  private readonly entry: Entry;
+  readonly githubURL: string;
 
-  private textPromise: Promise<string> | undefined = undefined;
+  text: Promise<string>;
+  command: Promise<string>;
+  description: Promise<string>;
+}
+
+export interface PageInternal {
+  readonly path: string;
+  text: Promise<string>;
+}
+
+export class PageWrapper implements Page {
+  private pageInternal: PageInternal;
+
   private commandPromise: Promise<string> | undefined = undefined;
   private descriptionPromise: Promise<string> | undefined = undefined;
 
@@ -12,42 +27,32 @@ export class Page {
   readonly platform: string;
   readonly language: string;
   readonly path: string;
-  readonly filename: string;
-
-  // for search
   readonly basenameLower: string;
 
-  constructor(entry: Entry) {
-    this.entry = entry;
+  constructor(page: PageInternal) {
+    this.pageInternal = page;
 
-    // pre-compute attributes
-    this.filename = entry.filename;
-    this.path = path(this.filename);
-    this.basename = basename(this.filename);
+    this.path = page.path;
+    this.basename = basename(this.path);
     this.platform = platform(this.path);
     this.language = language(this.path);
 
-    // for search
     this.basenameLower = this.basename.toLowerCase();
-  }
-
-  async text(): Promise<string> {
-    if (this.textPromise) return this.textPromise;
-
-    this.textPromise = getText(this.entry);
-
-    return this.textPromise;
   }
 
   get githubURL(): string {
     return `https://github.com/tldr-pages/tldr/blob/main${this.path}.md`;
   }
 
+  get text(): Promise<string> {
+    return this.pageInternal.text;
+  }
+
   get command(): Promise<string> {
     if (this.commandPromise) return this.commandPromise;
 
     this.commandPromise = (async () => {
-      const text = await this.text();
+      const text = await this.text;
       // regex get # h1
       const command = text.match(/^# (.*)/)?.[1];
       if (!command) {
@@ -63,7 +68,7 @@ export class Page {
     if (this.descriptionPromise) return this.descriptionPromise;
 
     this.descriptionPromise = (async () => {
-      const text = await this.text();
+      const text = await this.text;
 
       // regex get > quote multi line
       const descriptionParts = [...text.matchAll(/\n> (.*)/g)];
@@ -75,15 +80,8 @@ export class Page {
   }
 }
 
-function path(filename: string): string {
-  const prefix = "tldr-main";
-  const suffix = ".md";
-
-  return filename.slice(prefix.length, -suffix.length);
-}
-
-function basename(filename: string): string {
-  const filenameParts = filename.split("/");
+function basename(path: string): string {
+  const filenameParts = path.split("/");
   const command = filenameParts[filenameParts.length - 1].split(".")[0];
   return command;
 }

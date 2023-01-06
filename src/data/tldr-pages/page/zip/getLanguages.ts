@@ -1,4 +1,4 @@
-import { getPages } from "@/data/tldr-pages/page";
+import { getPages } from "./getPages";
 
 let languagesPromise: Promise<Set<string>> | null = null;
 

@@ -1,4 +1,4 @@
-import { Page, getPages } from "../page";
+import { type Page, getPages } from "../page";
 import { filterByLanguageAndPlatform } from "./filter-language-platform";
 
 export interface SearchOptions {

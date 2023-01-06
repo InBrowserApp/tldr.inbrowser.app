@@ -1,5 +1,11 @@
+export type { Page } from "./Page";
+
+export {
+  getLanguages,
+  getPlatforms,
+  getPages,
+  getLastModifiedTime,
+  getPageCount,
+} from "./zip";
+
 export { getPage } from "./getPage";
-export { Page } from "./Page";
-export { getPages } from "./getPages";
-export { getLanguages } from "./getLanguages";
-export { getPlatforms } from "./getPlatforms";

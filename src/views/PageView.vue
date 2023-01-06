@@ -8,7 +8,7 @@ import PageLanguage from "@/components/page/PageLanguage.vue";
 import PagePlatform from "@/components/page/PagePlatform.vue";
 import { usePage } from "@/data/tldr-pages/composables/usePage";
 import { usePageViewMetadata } from "./usePageViewMetadata";
-import { languageTag } from "@/data/tldr-pages/misc/languageTag";
+import { languageTag } from "@/data/tldr-pages/misc";
 import NotFound from "@/components/misc/NotFound.vue";
 
 const route = useRoute();

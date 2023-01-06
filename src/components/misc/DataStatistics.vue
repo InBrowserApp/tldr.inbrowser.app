@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import { NTime, NSkeleton, NStatistic, NGrid, NGridItem } from "naive-ui";
-import { getLastModifiedTime, getPageCount } from "@/data/tldr-pages/misc";
+import { getLastModifiedTime, getPageCount } from "@/data/tldr-pages/page";
 import { computedAsync } from "@vueuse/core";
 
 const pageCount = computedAsync(getPageCount, undefined);

@@ -20,7 +20,7 @@ export function usePage(path: Ref<string> | string) {
 
   const markdown = computedAsync<string | undefined | null>(async () => {
     if (page.value) {
-      const text = await page.value.text();
+      const text = await page.value.text;
       nextTick(loadingBar.finish);
       return text;
     } else {
