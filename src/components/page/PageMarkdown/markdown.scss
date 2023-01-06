@@ -137,7 +137,7 @@
         box-sizing: border-box;
         padding: 0.05em 0.35em 0 0.35em;
         border-radius: var(--n-code-border-radius);
-        font-size: .9em;
+        font-size: 1em;
         color: var(--n-code-text-color);
         background-color: var(--n-code-color);
         border: var(--n-code-border);
@@ -151,5 +151,10 @@
         font-size: var(--n-font-size);
         line-height: var(--n-line-height);
         color: var(--n-text-color);
+    }
+
+    // single line <code>
+    p > code {
+        margin-left: 2em;
     }
 }
