@@ -2,12 +2,13 @@
   <header>
     <div class="wrapper">
       <HeaderText />
-      <HeaderNav class="nav" style="margin-bottom: 1em" />
+      <HeaderNav class="nav hidden-on-print" style="margin-bottom: 1em" />
 
       <PageSearch
         id="header-search"
         v-if="showSearch"
         style="margin-bottom: 1em"
+        class="hidden-on-print"
       />
     </div>
   </header>

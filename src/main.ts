@@ -12,4 +12,7 @@ app.use(createPinia());
 app.use(router);
 app.use(head);
 
+// import styles
+import "@/styles/hidden-on-print.css";
+
 app.mount("#app");

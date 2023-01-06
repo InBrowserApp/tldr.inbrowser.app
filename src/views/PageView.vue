@@ -36,8 +36,8 @@ usePageViewMetadata(page);
         <PageMarkdown :markdown="markdown" />
       </div>
 
-      <n-divider />
-      <FindOnGitHub :href="page.githubURL" />
+      <n-divider class="hidden-on-print" />
+      <FindOnGitHub class="hidden-on-print" :href="page.githubURL" />
     </template>
     <template v-if="page === null">
       <NotFound />
