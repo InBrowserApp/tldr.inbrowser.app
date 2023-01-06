@@ -1,11 +1,8 @@
-import type { Entry } from "@zip.js/zip.js";
-import { getText } from "../zip";
 import type { Page } from "./Page";
 
-export class PageFromZip implements Page {
-  private readonly entry: Entry;
+export class PageFromGithub implements Page {
+  private readonly content: string;
 
-  private textPromise: Promise<string> | undefined = undefined;
   private commandPromise: Promise<string> | undefined = undefined;
   private descriptionPromise: Promise<string> | undefined = undefined;
 
@@ -13,31 +10,22 @@ export class PageFromZip implements Page {
   readonly platform: string;
   readonly language: string;
   readonly path: string;
-  readonly filename: string;
 
   // for search
   readonly basenameLower: string;
 
-  constructor(entry: Entry) {
-    this.entry = entry;
-
-    // pre-compute attributes
-    this.filename = entry.filename;
-    this.path = path(this.filename);
-    this.basename = basename(this.filename);
+  constructor(path: string, content: string) {
+    this.content = content;
+    this.path = path;
+    this.basename = basename(this.path);
     this.platform = platform(this.path);
     this.language = language(this.path);
 
-    // for search
     this.basenameLower = this.basename.toLowerCase();
   }
 
   async text(): Promise<string> {
-    if (this.textPromise) return this.textPromise;
-
-    this.textPromise = getText(this.entry);
-
-    return this.textPromise;
+    return this.content;
   }
 
   get githubURL(): string {
@@ -76,15 +64,8 @@ export class PageFromZip implements Page {
   }
 }
 
-function path(filename: string): string {
-  const prefix = "tldr-main";
-  const suffix = ".md";
-
-  return filename.slice(prefix.length, -suffix.length);
-}
-
-function basename(filename: string): string {
-  const filenameParts = filename.split("/");
+function basename(path: string): string {
+  const filenameParts = path.split("/");
   const command = filenameParts[filenameParts.length - 1].split(".")[0];
   return command;
 }

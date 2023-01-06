@@ -3,7 +3,6 @@ export interface Page {
   readonly platform: string;
   readonly language: string;
   readonly path: string;
-  readonly filename: string;
   readonly basenameLower: string;
 
   readonly githubURL: string;
