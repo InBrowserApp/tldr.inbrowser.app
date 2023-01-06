@@ -1,6 +1,6 @@
 import type { Entry } from "@zip.js/zip.js";
-import { getText } from "../zip";
-import type { PageInternal } from "./Page";
+import { getText } from "./zipLib";
+import type { PageInternal } from "../Page";
 
 export class PageFromZip implements PageInternal {
   private readonly entry: Entry;

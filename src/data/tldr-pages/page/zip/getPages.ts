@@ -1,7 +1,7 @@
-import { getPagesEntries } from "../zip";
+import { getPagesEntries } from "./zipLib";
 import { PageFromZip } from "./PageFromZip";
-import type { Page } from "./Page";
-import { PageWrapper } from "./Page";
+import type { Page } from "../Page";
+import { PageWrapper } from "../Page";
 
 let pagesPromise: Promise<Page[]> | null = null;
 

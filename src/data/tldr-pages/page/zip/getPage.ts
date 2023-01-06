@@ -1,4 +1,4 @@
-import type { Page } from "./Page";
+import type { Page } from "../Page";
 import { getPagesMap } from "./getPagesMap";
 
 export async function getPage(path: string): Promise<Page> {

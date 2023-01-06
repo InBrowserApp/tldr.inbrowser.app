@@ -1,4 +1,4 @@
-import { getPages } from "../page";
+import { getPages } from "./getPages";
 
 export async function getPageCount(): Promise<number> {
   const pages = await getPages();

@@ -1,4 +1,4 @@
-import { getEntries } from "../zip/getEntries";
+import { getEntries } from "./zipLib";
 
 export async function getLastModifiedTime(): Promise<Date> {
   const entries = await getEntries();
