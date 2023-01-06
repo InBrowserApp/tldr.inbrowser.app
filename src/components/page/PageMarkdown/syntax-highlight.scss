@@ -17,4 +17,9 @@
     // font-size: 1.1em;
     font-weight: bold;
   }
+
+  li> span:first-child.mnemonics{
+    // capitalize the first letter
+    text-transform: capitalize;
+  }
 }
