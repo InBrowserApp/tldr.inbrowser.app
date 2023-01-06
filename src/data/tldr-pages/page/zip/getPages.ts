@@ -4,6 +4,7 @@ import type { Page } from "../Page";
 import { PageWrapper } from "../Page";
 
 let pagesPromise: Promise<Page[]> | null = null;
+export let isReady = false;
 
 export async function getPages(): Promise<Page[]> {
   if (pagesPromise) return await pagesPromise;
@@ -13,6 +14,7 @@ export async function getPages(): Promise<Page[]> {
     const pages = entries.map(
       (entry) => new PageWrapper(new PageFromZip(entry))
     );
+    isReady = true;
     return pages;
   })();
 

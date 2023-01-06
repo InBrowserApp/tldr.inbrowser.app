@@ -1,4 +1,4 @@
-import type { PageInternal } from "./Page";
+import type { PageInternal } from "../Page";
 
 export class PageFromGithub implements PageInternal {
   readonly text: Promise<string>;

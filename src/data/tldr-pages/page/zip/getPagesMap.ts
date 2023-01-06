@@ -1,5 +1,5 @@
 import { getPages } from "./getPages";
-import type { Page } from "./Page";
+import type { Page } from "../Page";
 
 let pagesMapPromise: Promise<Map<string, Page>> | null = null;
 

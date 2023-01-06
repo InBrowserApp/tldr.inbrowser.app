@@ -4,7 +4,8 @@ export {
   getLanguages,
   getPlatforms,
   getPages,
-  getPage,
   getLastModifiedTime,
   getPageCount,
 } from "./zip";
+
+export { getPage } from "./getPage";
