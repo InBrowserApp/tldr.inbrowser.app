@@ -1,0 +1,20 @@
+.main-markdown {
+  .code-placeholder {
+    color: #d91e18;
+
+    // dark theme
+    @media (prefers-color-scheme: dark) {
+      & {
+        color: #ffa07a;
+      }
+    }
+  }
+
+  .mnemonics {
+    // TODO: use a better color or style?
+    // color: var(--primary-color);
+    // text-decoration: underline;
+    // font-size: 1.1em;
+    font-weight: bold;
+  }
+}
