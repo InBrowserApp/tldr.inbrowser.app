@@ -18,7 +18,8 @@
     font-weight: bold;
   }
 
-  li> span:first-child.mnemonics{
+  // tldr-lint TLDR015
+  li:first-letter {
     // capitalize the first letter
     text-transform: capitalize;
   }
