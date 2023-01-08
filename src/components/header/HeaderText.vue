@@ -10,7 +10,7 @@
       </router-link>
     </n-h1>
     <n-h2 class="h2">
-      tldr InBrowser.App is a offline-capable PWA for tldr-pages. Fully runs in
+      tldr InBrowser.App is an offline-capable PWA for tldr-pages. Fully runs in
       your browser. Zero API latency.
     </n-h2>
   </div>

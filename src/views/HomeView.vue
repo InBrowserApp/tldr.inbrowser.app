@@ -22,7 +22,7 @@ useHead({
     {
       name: "description",
       content:
-        "tldr InBrowser.App is a offline-capable PWA for tldr-pages. Fully runs in your browser. Zero API latency.",
+        "tldr InBrowser.App is an offline-capable PWA for tldr-pages. Fully runs in your browser. Zero API latency.",
     },
   ],
   link: [

@@ -20,7 +20,7 @@ export default defineConfig({
         name: "tldr InBrowser.App",
         short_name: "tldr",
         description:
-          "tldr InBrowser.App is a offline-capable PWA for tldr-pages. Fully runs in your browser. Zero API latency.",
+          "tldr InBrowser.App is an offline-capable PWA for tldr-pages. Fully runs in your browser. Zero API latency.",
         theme_color: "#ffffff",
         icons: [
           {
