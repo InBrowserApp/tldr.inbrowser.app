@@ -5,14 +5,13 @@ import { useHead } from "@vueuse/head";
 import { computedAsync } from "@vueuse/core";
 import { usePageOptionalCommand } from "@/data/tldr-pages/composables/usePageCommand";
 import { useRoute } from "vue-router";
+import { useRouteParams } from "@vueuse/router";
 
 export function usePageViewMetadata(page: Ref<Page | undefined | null>) {
+  const pageParams = useRouteParams<string>("page");
   const route = useRoute();
 
-  const titlePrefix = usePageOptionalCommand(
-    page,
-    route.params.page as string
-  ).command;
+  const titlePrefix = usePageOptionalCommand(page, pageParams).command;
   const title = computed(() => `${titlePrefix.value} | tldr InBrowser.App`);
 
   const description = computedAsync<string | undefined>(async () => {

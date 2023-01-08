@@ -1,12 +1,8 @@
-import { useRoute } from "vue-router";
 import { computed } from "vue";
+import { useRouteParams } from "@vueuse/router";
 
 export function useLanguage() {
-  const route = useRoute();
-  const languagePathPart = computed(() => {
-    const language = route.params.language;
-    return language as string;
-  });
+  const languagePathPart = useRouteParams<string>("language");
   const language = computed(() => languagePathPart.value.replace(".", ""));
 
   return {
