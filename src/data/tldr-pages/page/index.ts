@@ -6,6 +6,7 @@ export {
   getPages,
   getLastModifiedTime,
   getPageCount,
+  getCommitHash,
 } from "./zip";
 
 export { getPage } from "./getPage";

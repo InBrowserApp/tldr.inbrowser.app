@@ -5,3 +5,4 @@ export { getLanguages } from "./getLanguages";
 export { getPlatforms } from "./getPlatforms";
 export { getLastModifiedTime } from "./getLastModifiedTime";
 export { getPageCount } from "./getPageCount";
+export { getCommitHash } from "./getCommitHash";
