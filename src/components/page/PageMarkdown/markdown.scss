@@ -154,7 +154,7 @@
     }
 
     // single line <code>
-    p > code {
-        margin-left: 2em;
+    ul + p {
+        padding-left: 2em;
     }
 }
