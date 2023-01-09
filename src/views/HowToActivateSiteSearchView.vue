@@ -23,13 +23,26 @@
     <n-p>
       Then click the <n-tag :bordered="false">Activate</n-tag> button of tldr.
     </n-p>
+
+    <n-divider />
+
+    <n-p>
+      Now you can use the site search feature of Google Chrome. Just type
+      <n-text code style="font-size: 1em">tldr</n-text> in the address bar and
+      press <n-tag :bordered="false">Tab</n-tag> to search commands.
+    </n-p>
+
+    <n-p>
+      <ChromeOmniboxExample />
+    </n-p>
   </main>
 </template>
 
 <script setup lang="ts">
-import { NH1, NP, NTag, NText } from "naive-ui";
+import { NH1, NP, NTag, NText, NDivider } from "naive-ui";
 import { useHead } from "@vueuse/head";
 import ChromeInactiveShortcuts from "@/components/misc/ChromeInactiveShortcuts/ChromeInactiveShortcuts.vue";
+import ChromeOmniboxExample from "@/components/misc/ChromeOmniboxExample/ChromeOmniboxExample.vue";
 
 useHead({
   title: "How to Active Site Search | tldr InBrowser.App",
