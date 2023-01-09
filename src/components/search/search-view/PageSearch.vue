@@ -11,13 +11,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import PageSearchConfig from "../PageSearchConfig.vue";
 import PageSearchQueryInput from "./PageSearchQueryInput.vue";
 import { useSearchConfig } from "../composables";
 import { searchPages } from "@/data/tldr-pages/search";
 import { computedAsync } from "@vueuse/core";
 import PageInfos from "@/components/platform/PageInfos.vue";
+import { useRouter } from "vue-router";
+
+const isFirstRender = ref(true);
+const router = useRouter();
 
 const props = defineProps<{
   query: string;
@@ -35,6 +39,9 @@ const query = computed({
 });
 
 const searchResults = computedAsync(async () => {
+  const firstRender = isFirstRender.value;
+  isFirstRender.value = false;
+
   if (query.value === "") {
     return [];
   }
@@ -45,6 +52,12 @@ const searchResults = computedAsync(async () => {
     platforms,
   });
   console.debug(results);
+  if (firstRender) {
+    if (results.length >= 1 && results[0].basename === query.value) {
+      router.push(results[0].path);
+    }
+  }
+
   return results;
 }, []);
 </script>
