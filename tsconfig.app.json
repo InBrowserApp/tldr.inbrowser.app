@@ -7,6 +7,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": [
+      "./node_modules/user-agent-data-types"
+    ]
   }
 }
