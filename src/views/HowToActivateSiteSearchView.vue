@@ -9,9 +9,11 @@
     </n-p>
     <n-p>
       Or type
-      <n-text code style="font-size: 1em"
-        >chrome://settings/searchEngines</n-text
-      >
+      <CopyToClipboard content="chrome://settings/searchEngines">
+        <n-text code style="font-size: 1em"
+          >chrome://settings/searchEngines</n-text
+        >
+      </CopyToClipboard>
       in the address bar.
     </n-p>
     <n-p> You will find a list of inactive shortcuts: </n-p>
@@ -45,6 +47,7 @@ import { useHead } from "@vueuse/head";
 import ChromeInactiveShortcuts from "@/components/misc/ChromeInactiveShortcuts/ChromeInactiveShortcuts.vue";
 import ChromeOmniboxExample from "@/components/misc/ChromeOmniboxExample/ChromeOmniboxExample.vue";
 import ActivateButtonStandalone from "@/components/misc/ChromeInactiveShortcuts/ActivateButtonStandalone.vue";
+import CopyToClipboard from "@/components/misc/CopyToClipboard.vue";
 
 useHead({
   title: "How to Activate Site Search | tldr InBrowser.App",
