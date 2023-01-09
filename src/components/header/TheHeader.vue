@@ -22,7 +22,9 @@ import PageSearch from "@/components/search/auto-complete/PageSearch.vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
-const showSearch = computed(() => route.name !== "home");
+const showSearch = computed(
+  () => route.name !== "home" && route.name !== "search"
+);
 </script>
 
 <style scoped>
