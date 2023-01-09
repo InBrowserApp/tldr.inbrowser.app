@@ -1,12 +1,15 @@
 <template>
   <n-config-provider :theme="theme">
     <n-global-style />
-    <n-loading-bar-provider>
-      <div class="app">
-        <TheHeader />
-        <RouterView />
-      </div>
-    </n-loading-bar-provider>
+    <n-message-provider placement="bottom">
+      <n-loading-bar-provider>
+        <div class="app">
+          <TheHeader />
+          <RouterView />
+        </div>
+        <SiteSearchActivateEnableHint />
+      </n-loading-bar-provider>
+    </n-message-provider>
   </n-config-provider>
 </template>
 
@@ -17,10 +20,12 @@ import {
   NConfigProvider,
   NGlobalStyle,
   NLoadingBarProvider,
+  NMessageProvider,
 } from "naive-ui";
 import { RouterView } from "vue-router";
 import { computed } from "vue";
 import TheHeader from "@/components/header/TheHeader.vue";
+import SiteSearchActivateEnableHint from "@/components/misc/SiteSearchActivateEnableHint/SiteSearchActivateEnableHint.vue";
 
 const osThemeRef = useOsTheme();
 const theme = computed(() => (osThemeRef.value === "dark" ? darkTheme : null));
