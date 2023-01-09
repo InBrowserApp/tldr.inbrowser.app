@@ -47,11 +47,11 @@ import ChromeOmniboxExample from "@/components/misc/ChromeOmniboxExample/ChromeO
 import ActivateButtonStandalone from "@/components/misc/ChromeInactiveShortcuts/ActivateButtonStandalone.vue";
 
 useHead({
-  title: "How to Active Site Search | tldr InBrowser.App",
+  title: "How to Activate Site Search | tldr InBrowser.App",
   meta: [
     {
       name: "description",
-      content: "How to Active Site Search for tldr in Google Chrome",
+      content: "How to Activate Site Search for tldr in Google Chrome",
     },
   ],
 });
