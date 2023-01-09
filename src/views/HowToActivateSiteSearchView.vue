@@ -1,22 +1,37 @@
 <template>
   <main>
     <n-h1 prefix="bar" align-text>How to Activate Site Search</n-h1>
-    <n-p>
-      Go to <n-tag :bordered="false">Chrome Settings</n-tag> /
-      <n-tag :bordered="false">Search Engine</n-tag> /
-      <n-tag :bordered="false">Manage search engines and site search</n-tag> /
-      <n-tag :bordered="false">Inactive shortcuts</n-tag>
-    </n-p>
-    <n-p>
-      Or type
-      <CopyToClipboard content="chrome://settings/searchEngines">
-        <n-text code style="font-size: 1em"
-          >chrome://settings/searchEngines</n-text
+    <n-p> There are three ways to navigate to the setting page:</n-p>
+    <n-ul>
+      <n-li>
+        Type
+        <CopyToClipboard content="chrome://settings/searchEngines">
+          <n-text code style="font-size: 1em"
+            >chrome://settings/searchEngines</n-text
+          >
+        </CopyToClipboard>
+        in the address bar.
+      </n-li>
+      <n-li>
+        Right click on the address bar and select
+        <n-tag :bordered="false">Manage search engines and site search</n-tag>
+      </n-li>
+      <n-li>
+        Go to
+        <n-tag :bordered="false" class="settings-tag">Chrome Settings</n-tag> /
+        <n-tag :bordered="false" class="settings-tag">Search Engine</n-tag> /
+        <n-tag :bordered="false" class="settings-tag"
+          >Manage search engines and site search</n-tag
         >
-      </CopyToClipboard>
-      in the address bar.
+        /
+        <n-tag :bordered="false" class="settings-tag">Inactive shortcuts</n-tag>
+      </n-li>
+    </n-ul>
+
+    <n-p>
+      After navigating to the setting page, you will find a list of inactive
+      shortcuts:
     </n-p>
-    <n-p> You will find a list of inactive shortcuts: </n-p>
 
     <n-p>
       <ChromeInactiveShortcuts />
@@ -42,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import { NH1, NP, NTag, NText, NDivider } from "naive-ui";
+import { NH1, NP, NTag, NText, NDivider, NUl, NLi } from "naive-ui";
 import { useHead } from "@vueuse/head";
 import ChromeInactiveShortcuts from "@/components/misc/ChromeInactiveShortcuts/ChromeInactiveShortcuts.vue";
 import ChromeOmniboxExample from "@/components/misc/ChromeOmniboxExample/ChromeOmniboxExample.vue";
@@ -59,3 +74,9 @@ useHead({
   ],
 });
 </script>
+
+<style scoped>
+.settings-tag {
+  margin-bottom: 0.25em;
+}
+</style>
