@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { NH2 } from "naive-ui";
-import PageSearch from "@/components/search/PageSearch.vue";
+import PageSearch from "@/components/search/auto-complete/PageSearch.vue";
 import { useHead } from "@vueuse/head";
 
 useHead({

@@ -6,9 +6,9 @@
 </template>
 
 <script setup lang="ts">
-import PageSearchConfig from "./PageSearchConfig.vue";
-import PageSearchAutoComplete from "./PageSearchAutoComplete.vue";
-import { useSearchConfig } from "./composables";
+import PageSearchConfig from "../PageSearchConfig.vue";
+import PageSearchAutoComplete from "../auto-complete/PageSearchAutoComplete.vue";
+import { useSearchConfig } from "../composables";
 
 const { config } = useSearchConfig();
 </script>
