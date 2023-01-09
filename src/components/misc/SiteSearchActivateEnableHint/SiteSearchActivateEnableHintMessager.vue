@@ -32,6 +32,8 @@ const removeMessage = () => {
 
 onMounted(async () => {
   // https://twitter.com/googlechrome/status/1504858902248230944
+
+  // FIXME: don't know why tsconfig.app.json compilerOptions.types is not working
   const isMobile = navigator?.userAgentData?.mobile ?? true;
   const ChromeBrand = (navigator?.userAgentData?.brands ?? []).find(
     (brand) => brand.brand === "Google Chrome"
