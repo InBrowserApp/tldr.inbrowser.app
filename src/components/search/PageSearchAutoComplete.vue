@@ -26,7 +26,7 @@ import { computedAsync } from "@vueuse/core";
 import PageSearchResultEntry from "./PageSearchResultEntry.vue";
 import type { Page } from "@/data/tldr-pages/page";
 import { useRouter } from "vue-router";
-import { useRandomPlaceholder } from "./useRandomPlaceholder";
+import { useRandomPlaceholder } from "./composables";
 
 const { placeholder } = useRandomPlaceholder();
 

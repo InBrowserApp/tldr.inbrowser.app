@@ -7,20 +7,10 @@
 
 <script setup lang="ts">
 import PageSearchConfig from "./PageSearchConfig.vue";
-import { useStorage } from "@vueuse/core";
 import PageSearchAutoComplete from "./PageSearchAutoComplete.vue";
-import { getDefaultPlatforms } from "./getDefaultPlatforms";
-import { getDefaultLanguages } from "./getDefaultLanguages";
+import { useSearchConfig } from "./composables";
 
-const config = useStorage(
-  "tldr.inbrowser.app:search:config",
-  {
-    languages: getDefaultLanguages(),
-    platforms: getDefaultPlatforms(),
-  },
-  undefined,
-  { mergeDefaults: true }
-);
+const { config } = useSearchConfig();
 </script>
 
 <style scoped>
