@@ -23,10 +23,10 @@ import { ref, computed, h, onMounted, nextTick } from "vue";
 import { NAutoComplete, type SelectOption } from "naive-ui";
 import { searchPages } from "@/data/tldr-pages/search";
 import { computedAsync } from "@vueuse/core";
-import PageSearchResultEntry from "./PageSearchResultEntry.vue";
+import PageSearchResultEntry from "../PageSearchResultEntry.vue";
 import type { Page } from "@/data/tldr-pages/page";
 import { useRouter } from "vue-router";
-import { useRandomPlaceholder } from "./useRandomPlaceholder";
+import { useRandomPlaceholder } from "../composables";
 
 const { placeholder } = useRandomPlaceholder();
 

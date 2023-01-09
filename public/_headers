@@ -3,3 +3,6 @@
 
 /tldr-pages.zip
   Content-Type: text/plain
+
+/opensearch.xml
+  Content-Type: application/opensearchdescription+xml

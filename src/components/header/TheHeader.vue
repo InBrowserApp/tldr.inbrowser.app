@@ -18,7 +18,7 @@
 import { computed } from "vue";
 import HeaderText from "./HeaderText.vue";
 import HeaderNav from "./nav/HeaderNav.vue";
-import PageSearch from "@/components/search/PageSearch.vue";
+import PageSearch from "@/components/search/auto-complete/PageSearch.vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
