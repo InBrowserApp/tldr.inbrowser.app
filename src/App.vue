@@ -1,7 +1,7 @@
 <template>
   <n-config-provider :theme="theme">
     <n-global-style />
-    <n-message-provider placement="bottom">
+    <n-message-provider>
       <n-loading-bar-provider>
         <div class="app">
           <TheHeader />
