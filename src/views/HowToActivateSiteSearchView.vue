@@ -44,7 +44,16 @@
 
     <n-p>
       After activating the site search, you will find a new search engine
-      <n-text code style="font-size: 1em">tldr</n-text> in the list:
+      <n-text code style="font-size: 1em">tldr</n-text> in the "Site search"
+      list:
+    </n-p>
+
+    <ChromeSiteSearch />
+
+    <n-p>
+      Change <n-text code style="font-size: 1em">tldr</n-text>'s shortcut from
+      <n-text code style="font-size: 1em">tldr.inbrowser.app</n-text> to
+      <n-text code style="font-size: 1em">tldr</n-text>
     </n-p>
 
     <n-divider />
@@ -68,6 +77,7 @@ import ChromeInactiveShortcuts from "@/components/misc/ChromeSiteSearch/ChromeIn
 import ChromeOmniboxExample from "@/components/misc/ChromeOmniboxExample/ChromeOmniboxExample.vue";
 import ActivateButtonStandalone from "@/components/misc/ChromeSiteSearch/ChromeInactiveShortcuts/ActivateButtonStandalone.vue";
 import CopyToClipboard from "@/components/misc/CopyToClipboard.vue";
+import ChromeSiteSearch from "@/components/misc/ChromeSiteSearch/ChromeSiteSearch/ChromeSiteSearch.vue";
 
 useHead({
   title: "How to Activate Site Search | tldr InBrowser.App",
