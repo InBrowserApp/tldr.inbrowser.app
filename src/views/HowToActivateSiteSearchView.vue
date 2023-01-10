@@ -42,12 +42,17 @@
       <n-text code style="font-size: 1em">tldr</n-text> site search.
     </n-p>
 
+    <n-p>
+      After activating the site search, you will find a new search engine
+      <n-text code style="font-size: 1em">tldr</n-text> in the list:
+    </n-p>
+
     <n-divider />
 
     <n-p>
       Now you can use the site search feature of Google Chrome. Just type
-      <n-text code style="font-size: 1em">tldr</n-text> in the address bar and
-      press <n-tag :bordered="false">Tab</n-tag> to search commands.
+      <n-text code style="font-size: 1em">tldr tar</n-text> in the address bar
+      and press <n-tag :bordered="false">Enter</n-tag> to search commands.
     </n-p>
 
     <n-p>
@@ -59,9 +64,9 @@
 <script setup lang="ts">
 import { NH1, NP, NTag, NText, NDivider, NUl, NLi } from "naive-ui";
 import { useHead } from "@vueuse/head";
-import ChromeInactiveShortcuts from "@/components/misc/ChromeInactiveShortcuts/ChromeInactiveShortcuts.vue";
+import ChromeInactiveShortcuts from "@/components/misc/ChromeSiteSearch/ChromeInactiveShortcuts/ChromeInactiveShortcuts.vue";
 import ChromeOmniboxExample from "@/components/misc/ChromeOmniboxExample/ChromeOmniboxExample.vue";
-import ActivateButtonStandalone from "@/components/misc/ChromeInactiveShortcuts/ActivateButtonStandalone.vue";
+import ActivateButtonStandalone from "@/components/misc/ChromeSiteSearch/ChromeInactiveShortcuts/ActivateButtonStandalone.vue";
 import CopyToClipboard from "@/components/misc/CopyToClipboard.vue";
 
 useHead({
