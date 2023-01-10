@@ -36,6 +36,10 @@ import URLColumn from "./URLColumn.vue";
   padding: 0;
 }
 
+.list-item {
+  --cr-icon-button-margin-end: 0;
+}
+
 .settings-search-engine-entry {
   border-top: var(--cr-separator-line);
 }
