@@ -1,10 +1,10 @@
 <template>
-  <span id="url-column-padded"><div>tldr.inbrowser.app</div></span>
+  <span id="shortcut-column"><div>tldr.inbrowser.app</div></span>
 </template>
 
 <style scoped>
-#url-column-padded {
-  flex: 3;
-  margin-inline-end: 40px;
+#shortcut-column {
+  flex: 4;
+  word-break: break-word;
 }
 </style>
