@@ -24,8 +24,12 @@ import {
 } from "naive-ui";
 import { RouterView } from "vue-router";
 import { computed } from "vue";
-import TheHeader from "@/components/header/TheHeader.vue";
 import SiteSearchActivateEnableHint from "@/components/misc/SiteSearchActivateEnableHint/SiteSearchActivateEnableHint.vue";
+import { defineAsyncComponent } from "vue";
+
+const TheHeader = defineAsyncComponent(
+  () => import("@/components/header/TheHeader.vue")
+);
 
 const osThemeRef = useOsTheme();
 const theme = computed(() => (osThemeRef.value === "dark" ? darkTheme : null));

@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import PageView from "../views/PageView.vue";
-import PlatformView from "../views/PlatformView.vue";
-import LanguageView from "../views/LanguageView.vue";
-import NotFoundView from "../views/NotFoundView.vue";
-import SearchView from "../views/SearchView.vue";
+const HomeView = () => import("../views/HomeView.vue");
+const PageView = () => import("../views/PageView.vue");
+const PlatformView = () => import("../views/PlatformView.vue");
+const LanguageView = () => import("../views/LanguageView.vue");
+const NotFoundView = () => import("../views/NotFoundView.vue");
+const SearchView = () => import("../views/SearchView.vue");
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
