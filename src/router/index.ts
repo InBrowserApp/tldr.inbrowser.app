@@ -5,7 +5,6 @@ import PlatformView from "../views/PlatformView.vue";
 import LanguageView from "../views/LanguageView.vue";
 import NotFoundView from "../views/NotFoundView.vue";
 import SearchView from "../views/SearchView.vue";
-import HowToActivateSiteSearchView from "../views/HowToActivateSiteSearchView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,7 +22,7 @@ const router = createRouter({
     {
       path: "/search/activate-site-search",
       name: "activate-site-search",
-      component: HowToActivateSiteSearchView,
+      component: () => import("../views/HowToActivateSiteSearchView.vue"),
     },
     // Language View
     // pattern: /pages
