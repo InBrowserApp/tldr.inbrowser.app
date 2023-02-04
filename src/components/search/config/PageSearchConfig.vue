@@ -1,11 +1,7 @@
 <template>
   <n-popover trigger="hover">
     <template #trigger>
-      <n-button quaternary circle aria-label="Search Configs">
-        <template #icon>
-          <n-icon :component="Settings20Filled" />
-        </template>
-      </n-button>
+      <ConfigIconButton />
     </template>
     <div class="search-config-panel">
       <n-form-item :show-feedback="false" style="margin-bottom: 1em">
@@ -34,13 +30,13 @@
 import { computed } from "vue";
 import { getPlatforms } from "@/data/tldr-pages/page";
 import { computedAsync } from "@vueuse/core";
-import { NSelect, NPopover, NButton, NFormItem, NIcon } from "naive-ui";
+import { NSelect, NPopover, NFormItem, NIcon } from "naive-ui";
 import Language from "@vicons/ionicons5/Language";
 import Desktop16Regular from "@vicons/fluent/Desktop16Regular";
-import Settings20Filled from "@vicons/fluent/Settings20Filled";
 import { getLanguageDisplay } from "@/data/tldr-pages/display";
 import { getPlatformDisplay } from "@/data/tldr-pages/display";
 import { useLanguages } from "@/data/tldr-pages/composables/useLanguages";
+import ConfigIconButton from "./ConfigIconButton.vue";
 
 const props = defineProps<{
   config: {

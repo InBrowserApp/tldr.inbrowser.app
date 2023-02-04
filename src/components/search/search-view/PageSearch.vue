@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import PageSearchConfig from "../PageSearchConfig.vue";
+import PageSearchConfig from "../config/PageSearchConfigAsync.vue";
 import PageSearchQueryInput from "./PageSearchQueryInput.vue";
 import { useSearchConfig } from "../composables";
 import { searchPages } from "@/data/tldr-pages/search";
