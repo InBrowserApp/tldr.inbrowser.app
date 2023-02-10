@@ -3,6 +3,7 @@
     text
     tag="a"
     href="https://github.com/InBrowserApp/tldr.inbrowser.app"
+    target="_blank"
   >
     <template #icon>
       <n-icon>
