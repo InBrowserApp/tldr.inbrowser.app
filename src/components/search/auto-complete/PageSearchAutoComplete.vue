@@ -12,7 +12,7 @@
     :render-label="renderLabel"
     :get-show="() => true"
     :menu-props="{ class: 'page-search-auto-complete-menu' }"
-    @select="router.push"
+    @select="onSelect"
     clear-after-select
     ref="searchInput"
   />
@@ -27,6 +27,7 @@ import PageSearchResultEntry from "../PageSearchResultEntry.vue";
 import type { Page } from "@/data/tldr-pages/page";
 import { useRouter } from "vue-router";
 import { useRandomPlaceholder } from "../composables";
+import { isInIframe } from "@/utils/is-in-iframe";
 
 const { placeholder } = useRandomPlaceholder();
 
@@ -83,6 +84,14 @@ onMounted(() => {
     );
   });
 });
+
+const onSelect = (value: string | number) => {
+  if (isInIframe()) {
+    window.open(`https://tldr.inbrowser.app${value}`, "_blank");
+  } else {
+    router.push(value as string);
+  }
+};
 </script>
 
 <style>
