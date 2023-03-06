@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       includeAssets: [
+        "opensearch.xml",
         "favicon.ico",
         "favicon.svg",
         "apple-touch-icon.png",
