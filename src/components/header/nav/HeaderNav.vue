@@ -5,8 +5,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NDivider } from "naive-ui";
-
 import NavGitHub from "./NavGitHub.vue";
 </script>
 
