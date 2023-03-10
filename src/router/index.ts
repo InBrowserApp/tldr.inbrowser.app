@@ -1,11 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import PageView from "../views/PageView.vue";
-import PlatformView from "../views/PlatformView.vue";
-import LanguageView from "../views/LanguageView.vue";
-import NotFoundView from "../views/NotFoundView.vue";
-import SearchView from "../views/SearchView.vue";
-import HowToActivateSiteSearchView from "../views/HowToActivateSiteSearchView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,44 +6,44 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView,
+      component: () => import("@/views/HomeView.vue"),
     },
     {
       path: "/search",
       name: "search",
-      component: SearchView,
+      component: () => import("@/views/SearchView.vue"),
     },
     {
       path: "/search/activate-site-search",
       name: "activate-site-search",
-      component: HowToActivateSiteSearchView,
+      component: () => import("@/views/HowToActivateSiteSearchView.vue"),
     },
     // Language View
     // pattern: /pages
     {
       path: "/pages:language(.*)",
       name: "language",
-      component: LanguageView,
+      component: () => import("@/views/LanguageView.vue"),
     },
     // Platform View
     // pattern: /pages/common
     {
       path: "/pages:language(.*)/:platform(.*)",
       name: "platform",
-      component: PlatformView,
+      component: () => import("@/views/PlatformView.vue"),
     },
     // Page View
     // pattern: /pages/common/cat
     {
       path: "/pages:language(.*)/:platform(.*)/:page(.*)",
       name: "page",
-      component: PageView,
+      component: () => import("@/views/PageView.vue"),
     },
     // Any other route
     {
       path: "/:path(.*)*",
       name: "not-found",
-      component: NotFoundView,
+      component: () => import("@/views/NotFoundView.vue"),
     },
   ],
 });
