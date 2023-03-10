@@ -15,11 +15,14 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed, defineAsyncComponent } from "vue";
 import HeaderText from "./HeaderText.vue";
 import HeaderNav from "./nav/HeaderNav.vue";
-import PageSearch from "@/components/search/auto-complete/PageSearch.vue";
 import { useRoute } from "vue-router";
+
+const PageSearch = defineAsyncComponent(
+  () => import("@/components/search/auto-complete/PageSearch.vue")
+);
 
 const route = useRoute();
 const showSearch = computed(
