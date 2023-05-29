@@ -1,5 +1,5 @@
 import { ref } from "vue";
-import { useIntervalFn } from "@vueuse/core";
+// import { useIntervalFn } from "@vueuse/core";
 
 const placeholders = [
   "cat",
@@ -40,12 +40,12 @@ export function useRandomPlaceholder() {
     placeholders[Math.floor(Math.random() * placeholders.length)]
   );
 
-  const updatePlaceholder = () => {
-    const index = Math.floor(Math.random() * placeholders.length);
-    placeholder.value = placeholders[index];
-  };
+  // const updatePlaceholder = () => {
+  //   const index = Math.floor(Math.random() * placeholders.length);
+  //   placeholder.value = placeholders[index];
+  // };
 
-  useIntervalFn(updatePlaceholder, 1500);
+  // useIntervalFn(updatePlaceholder, 1500);
 
   return { placeholder };
 }
