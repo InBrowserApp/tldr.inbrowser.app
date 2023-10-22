@@ -1,4 +1,4 @@
-type Platform = "common" | "osx" | "linux" | "windows" | "android" | "sunos";
+type Platform = "common" | "openbsd" | "osx" | "linux" | "windows" | "android" | "sunos";
 
 export function getDefaultPlatforms(): Platform[] {
   const platforms: Platform[] = ["common"];
@@ -7,6 +7,11 @@ export function getDefaultPlatforms(): Platform[] {
   if (navigatorPlatform) {
     if (navigatorPlatform.includes("win")) {
       platforms.push("windows");
+      return platforms;
+    }
+
+    if (navigatorPlatform.includes("openbsd")){
+      platforms.push("openbsd");
       return platforms;
     }
 
@@ -35,6 +40,10 @@ export function getDefaultPlatforms(): Platform[] {
   if (uaPlatform) {
     if (uaPlatform.includes("win")) {
       platforms.push("windows");
+    }
+
+    if (uaPlatform.includes("openbsd")){
+      platforms.push("openbsd");
     }
 
     if (uaPlatform.includes("mac")) {

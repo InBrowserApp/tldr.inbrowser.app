@@ -1,6 +1,7 @@
 const displayMap = {
   common: "Common",
   linux: "Linux",
+  openbsd: "OpenBSD",
   osx: "macOS",
   windows: "Windows",
   android: "Android",
