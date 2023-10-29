@@ -4,40 +4,40 @@ export function getDefaultPlatforms(): Platform[] {
   const platforms: Platform[] = ["common"];
   const navigatorPlatform = navigator?.platform?.toLowerCase();
 
-    if (navigatorPlatform.includes("android")) {
-     platforms.push("android");
-    }
+  if (navigatorPlatform.includes("android")) {
+    platforms.push("android");
+  }
 
-    if (navigatorPlatform.includes("freebsd")){
-      platforms.push("freebsd");
-    }
+  if (navigatorPlatform.includes("freebsd")){
+    platforms.push("freebsd");
+  }
 
-    if (navigatorPlatform.includes("linux")) {
-      platforms.push("linux");
-    }
+  if (navigatorPlatform.includes("linux")) {
+    platforms.push("linux");
+  }
 
-    if (navigatorPlatform.includes("mac")) {
-      platforms.push("osx");
+  if (navigatorPlatform.includes("mac")) {
+    platforms.push("osx");
+    return platforms;
+  }
+
+  if (navigatorPlatform.includes("netbsd")){
+    platforms.push("netbsd");
+  }
+
+  if (navigatorPlatform.includes("openbsd")){
+    platforms.push("openbsd");
+    return platforms;
+  }
+
+  if (navigatorPlatform.includes("sunos")) {
+    platforms.push("sunos");
+  }
+
+  if (navigatorPlatform) {
+    if (navigatorPlatform.includes("win")) {
+      platforms.push("windows");
       return platforms;
-    }
-
-    if (navigatorPlatform.includes("netbsd")){
-      platforms.push("netbsd");
-    }
-
-    if (navigatorPlatform.includes("openbsd")){
-      platforms.push("openbsd");
-      return platforms;
-    }
-
-    if (navigatorPlatform.includes("sunos")) {
-      platforms.push("sunos");
-    }
-
-    if (navigatorPlatform) {
-      if (navigatorPlatform.includes("win")) {
-        platforms.push("windows");
-        return platforms;
     }
   }
 
