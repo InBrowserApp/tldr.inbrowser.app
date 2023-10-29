@@ -18,7 +18,7 @@ import PlatformIcon from "./PlatformIcon.vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-const platforms = ["common", "linux", "openbsd", "osx", "windows", "android", "sunos"];
+const platforms = ["common", "linux", "freebsd", "netbsd", "openbsd", "osx", "windows", "android", "sunos"];
 
 const options = platforms.map((platform) => ({
   label: getPlatformDisplay(platform),
