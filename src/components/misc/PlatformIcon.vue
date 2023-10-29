@@ -14,6 +14,7 @@ import Windows from "@vicons/fa/Windows";
 import Freebsd from "@vicons/fa/Freebsd";
 import SunOSIcon from "./platform-icons/SunOSIcon.vue";
 import NetBSDIcon from "./platform-icons/NetBSDIcon.vue";
+import OpenBSDIcon from "./platform-icons/OpenBSDIcon.vue";
 
 const props = defineProps<{
   platform: string;
@@ -37,6 +38,8 @@ const icon = computed<Component>(() => {
       return SunOSIcon;
     case "netbsd":
       return NetBSDIcon;
+    case "openbsd":
+      return OpenBSDIcon;
     default:
       return Desktop16Regular;
   }
