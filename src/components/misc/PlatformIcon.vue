@@ -13,6 +13,7 @@ import Linux from "@vicons/fa/Linux";
 import Windows from "@vicons/fa/Windows";
 import Freebsd from "@vicons/fa/Freebsd";
 import SunOSIcon from "./platform-icons/SunOSIcon.vue";
+import NetBSDIcon from "./platform-icons/NetBSDIcon.vue";
 
 const props = defineProps<{
   platform: string;
@@ -34,6 +35,8 @@ const icon = computed<Component>(() => {
       return Freebsd;
     case "sunos":
       return SunOSIcon;
+    case "netbsd":
+      return NetBSDIcon;
     default:
       return Desktop16Regular;
   }
