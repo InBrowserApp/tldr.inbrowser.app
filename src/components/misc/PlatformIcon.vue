@@ -12,6 +12,7 @@ import Desktop16Regular from "@vicons/fluent/Desktop16Regular";
 import Linux from "@vicons/fa/Linux";
 import Windows from "@vicons/fa/Windows";
 import Freebsd from "@vicons/fa/Freebsd";
+import SunOSIcon from "./platform-icons/SunOSIcon.vue";
 
 const props = defineProps<{
   platform: string;
@@ -27,12 +28,12 @@ const icon = computed<Component>(() => {
       return Linux;
     case "osx":
       return Apple;
-    case "sunos":
-      return Desktop16Regular;
     case "windows":
       return Windows;
     case "freebsd":
       return Freebsd;
+    case "sunos":
+      return SunOSIcon;
     default:
       return Desktop16Regular;
   }
