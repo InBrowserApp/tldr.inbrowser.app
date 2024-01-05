@@ -1,14 +1,23 @@
-type Platform = "android" | "common" | "freebsd" | "linux" | "netbsd" | "openbsd" | "osx" | "windows" | "sunos";
+type Platform =
+  | "android"
+  | "common"
+  | "freebsd"
+  | "linux"
+  | "netbsd"
+  | "openbsd"
+  | "osx"
+  | "windows"
+  | "sunos";
 
 export function getDefaultPlatforms(): Platform[] {
-  const platforms: Platform[] = ["common"];
+  const platforms: Platform[] = ["common", "linux"];
   const navigatorPlatform = navigator?.platform?.toLowerCase();
 
   if (navigatorPlatform.includes("android")) {
     platforms.push("android");
   }
 
-  if (navigatorPlatform.includes("freebsd")){
+  if (navigatorPlatform.includes("freebsd")) {
     platforms.push("freebsd");
   }
 
@@ -21,11 +30,11 @@ export function getDefaultPlatforms(): Platform[] {
     return platforms;
   }
 
-  if (navigatorPlatform.includes("netbsd")){
+  if (navigatorPlatform.includes("netbsd")) {
     platforms.push("netbsd");
   }
 
-  if (navigatorPlatform.includes("openbsd")){
+  if (navigatorPlatform.includes("openbsd")) {
     platforms.push("openbsd");
     return platforms;
   }
@@ -62,11 +71,11 @@ export function getDefaultPlatforms(): Platform[] {
       platforms.push("osx");
     }
 
-    if (uaPlatform.includes("netbsd")){
+    if (uaPlatform.includes("netbsd")) {
       platforms.push("netbsd");
     }
 
-    if (uaPlatform.includes("openbsd")){
+    if (uaPlatform.includes("openbsd")) {
       platforms.push("openbsd");
     }
 
