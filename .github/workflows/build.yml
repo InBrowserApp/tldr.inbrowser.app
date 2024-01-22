@@ -17,8 +17,12 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 8
+        run_install: true
+    - run: pnpm ci
+    - run: pnpm run build
     - uses: actions/upload-artifact@v3
       with:
         name: dist
